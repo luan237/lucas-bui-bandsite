@@ -1,0 +1,78 @@
+// font family local files
+@font-face {
+    font-family: Avenir Next;
+    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+    src: url(../../assets/fonts/Alternative\ files/AvenirNextLTPro.ttf) format("ttf");
+}
+@font-face{
+    font-family: Avenir Next Bold;
+    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+    src: url(../../assets/fonts/Alternative\ files/AvenirNextLTPro-Bold.ttf) format("ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: Avenir Next Demi;
+    src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format("otf");
+    src: url(../../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi.ttf) format("ttf");
+    font-weight: 600;
+}
+
+
+// font weight variables
+$bold: 700;
+$demi: 600;
+$regular-size: 400;
+
+
+// font setup
+@mixin desktop-page-header{
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: $bold;
+}
+@mixin desktop-section-header{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: $bold;
+}
+@mixin desktop-subheader{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: $demi;
+}
+@mixin desktop-body-copy{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: $regular-size;
+}
+@mixin desktop-footer-copy{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $regular-size;
+}
+@mixin desktop-label-buttons{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: $bold;
+}
+
+@mixin mobile-page-section-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: $bold;
+}
+@mixin mobile-subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: $demi;
+}
+@mixin mobile-body-footer-copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: $regular-size;
+}
+@mixin mobile-label-button {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: $bold;
+}

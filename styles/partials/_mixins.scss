@@ -1,2 +1,15 @@
 @use "../partials/font" as *;
 @use "../partials/colors" as *;
+
+body{
+    @include mobile-body-footer-copy;
+}
+.page-header, .section-header{
+    @include mobile-page-section-header;
+}
+.sub-header{
+    @include mobile-sub-header;
+}
+.label{
+    @include mobile-label-button;
+}

@@ -64,4 +64,27 @@ table {
   src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format("otf");
   src: url(../../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi.ttf) format("ttf");
   font-weight: 600;
+}
+body {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.page-header, .section-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.sub-header {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
 }/*# sourceMappingURL=bio.css.map */

@@ -1,8 +1,17 @@
 @use "../partials/font" as *;
 @use "../partials/colors" as *;
 
+$mobile-long-padding: 24px;
+$mobile-short-padding: 16px;
+$desktop-long-padding: 48px;
+$desktop-short-padding: 36px;
+
+
 body{
     @include mobile-body-footer-copy;
+}
+a{
+    text-decoration: none;
 }
 .page-header, .section-header{
     @include mobile-page-section-header;
@@ -12,4 +21,9 @@ body{
 }
 .label{
     @include mobile-label-button;
+}
+
+@mixin logo {
+    max-width: 120px;
+    max-height: 20px;
 }

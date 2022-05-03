@@ -1,5 +1,138 @@
 @use "../styles/partials/css-reset" as *;
 @use "../styles/partials/font" as *;
 @use "../styles/partials/colors" as *;
-@use "../styles/partials/mixins" as *;
+@use "../styles/partials/partials" as *;
 
+// navigation bar
+.nav{
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    &__logo{
+        @include logo;
+        padding: 1rem 0 0.5rem 0;
+    }
+    &__items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    &__link{
+        color: $color-mercury;
+        padding-bottom: 1rem;
+        width: 50%;
+        text-align: center;
+        &:active{
+            color: $color-white;
+            font-weight: $bold;
+        }
+        &:hover{
+            color: $color-white;
+        }
+        &--highlight{
+            border-bottom: 2px solid $color-white;
+        }
+    }
+}
+// hero
+.hero{
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 11rem;
+    position: relative;
+    overflow: hidden;
+    &__title{
+        color: $color-white;
+        background-color: rgba(32, 32, 32, 0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 3%;
+    }
+}
+// header margin
+header{
+    margin-bottom: $mobile-long-padding;
+}
+
+// main content
+// intro
+.intro{
+    padding: 0 3%;
+    &__images{
+        width: 100%;
+        padding-top: $mobile-short-padding;
+    }
+    &__slogan{
+        padding-top: $mobile-short-padding;
+        &--citation{
+            padding-bottom: $mobile-long-padding;
+        }
+    }
+    &__content{
+        &--title{
+            padding-bottom: $mobile-short-padding;
+        }
+        &--reading{
+            padding-bottom: $mobile-short-padding;
+    }
+    }
+}
+.gallery{
+    padding: $mobile-short-padding 3%;
+    &__pic{
+        width: 100%;
+        padding-bottom: $mobile-short-padding;
+    }
+    &__title{
+        padding-bottom: $mobile-short-padding;
+    }
+}
+footer{
+    position: relative;
+}
+.social{
+    background-color: $color-black;
+    color: $color-white;
+    padding: $mobile-long-padding 3% $mobile-short-padding 3%;
+    &__media{
+        & > *{
+            padding-bottom: $mobile-short-padding;
+        }
+        &--list{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        &--link{
+            margin-right: 2rem;
+        }
+    }
+    &__contact{
+        & > *{
+            padding-bottom: $mobile-short-padding;
+            & > *{
+                padding-bottom: $mobile-short-padding;
+            }
+        }
+        &--email{
+            color: $color-white;
+        }
+    }
+    &__copyright{
+        padding-top: 20%;
+    }
+}
+.footer__logo{
+    position: absolute;
+    bottom: 7%;
+    padding-left: 3%;
+}

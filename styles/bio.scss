@@ -2,7 +2,7 @@
 @use "../styles/partials/font" as *;
 @use "../styles/partials/colors" as *;
 @use "../styles/partials/partials" as *;
-
+@use "../styles/partials/variables" as *;
 // navigation bar
 .nav{
     background-color: $color-black;
@@ -11,15 +11,29 @@
     justify-content: center;
     align-items: center;
     color: $color-white;
+    @include tablet{
+        flex-direction: row;
+        height: 7rem;
+        justify-content: flex-start
+    }
     &__logo{
         @include logo;
         padding: 1rem 0 0.5rem 0;
+        @include tablet{
+            padding-left: $desktop-short-padding;
+            padding-right: $desktop-long-padding;
+        }
     }
     &__items{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
+        @include tablet{
+            width: auto;
+            height: 100%;
+            align-items: center;
+        }
     }
     &__link{
         color: $color-mercury;
@@ -36,6 +50,10 @@
         &--highlight{
             border-bottom: 2px solid $color-white;
         }
+        @include tablet{
+            width: 100%;
+            margin-right: $desktop-long-padding;
+        }
     }
 }
 // hero
@@ -46,6 +64,9 @@
     height: 11rem;
     position: relative;
     overflow: hidden;
+    @include tablet{
+        height: 31.9rem;
+    }
     &__title{
         color: $color-white;
         background-color: rgba(32, 32, 32, 0.5);
@@ -55,65 +76,153 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-left: 3%;
+        padding-left: $mobile-short-padding;
+        @include tablet{
+            padding-left: $desktop-short-padding;
+        }
     }
 }
 // header margin
 header{
     margin-bottom: $mobile-long-padding;
+    @include tablet{
+        margin-bottom: $desktop-long-padding;
+    }
 }
 
 // main content
 // intro
 .intro{
-    padding: 0 3%;
+    padding: 0 $mobile-short-padding;
+    @include tablet{
+        padding: 0 $desktop-short-padding;
+        position: relative;;
+    }
     &__images{
         width: 100%;
         padding-top: $mobile-short-padding;
+        @include tablet{
+            width: 85%;
+            padding: $desktop-short-padding auto;
+            position: relative;
+            left: 7%;
+        }
     }
     &__slogan{
         padding-top: $mobile-short-padding;
         &--citation{
             padding-bottom: $mobile-long-padding;
+            @include tablet{
+                padding-top: $desktop-short-padding;
+                padding-bottom: $desktop-long-padding;
+                padding-left: 5%;
+                padding-right: 6%;
+            }
+        }
+        @include tablet{
+            padding-top: $desktop-short-padding;
+            padding-left: 5%;
+            padding-right: 6%;
         }
     }
     &__content{
+        @include tablet{
+            padding-left: 5%;
+            padding-right: 5%;
+        }
         &--title{
             padding-bottom: $mobile-short-padding;
         }
         &--reading{
             padding-bottom: $mobile-short-padding;
+            font-weight: 400;
     }
+        &--card{
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
     }
 }
 .gallery{
-    padding: $mobile-short-padding 3%;
+    padding: $mobile-short-padding $mobile-short-padding;
+    background-color: $color-alabaster;
+    @include tablet{
+        padding: $desktop-short-padding $desktop-short-padding;
+    }
     &__pic{
         width: 100%;
         padding-bottom: $mobile-short-padding;
+        @include tablet{
+            width: 31%;
+            padding-bottom: $desktop-short-padding;
+        }
     }
     &__title{
         padding-bottom: $mobile-short-padding;
+        @include tablet{
+            padding-top: $desktop-long-padding;
+            padding-bottom: $desktop-long-padding;
+            font-weight: 600;
+        }
+    }
+    &__list{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 }
 footer{
     position: relative;
+    width: 100%;
 }
 .social{
     background-color: $color-black;
     color: $color-white;
-    padding: $mobile-long-padding 3% $mobile-short-padding 3%;
+    padding: $mobile-long-padding $mobile-short-padding $mobile-short-padding $mobile-short-padding;
+    @include tablet{
+        padding-left: $desktop-short-padding;
+        padding-right: $desktop-short-padding;
+        padding-top: $desktop-long-padding;
+    }
     &__media{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
         & > *{
             padding-bottom: $mobile-short-padding;
+
         }
         &--list{
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            align-items: center;
+            @include tablet{
+                padding-left: 2rem;
+            }
         }
         &--link{
             margin-right: 2rem;
+        }
+        &--title{
+            @include tablet{
+                font-weight: 600;
+            }
+        }
+        &--pic{
+            @include tablet{
+                width: 40px;
+                max-height: 40px;
+            }
         }
     }
     &__contact{
@@ -134,5 +243,11 @@ footer{
 .footer__logo{
     position: absolute;
     bottom: 7%;
-    padding-left: 3%;
+    padding-left: 16px;
+    @include tablet{
+        bottom: 0;
+        top: 4rem;
+        right: 3.5rem;
+        width: 15%;
+    }
 }

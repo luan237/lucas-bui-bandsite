@@ -1,29 +1,87 @@
 @use "../partials/font" as *;
 @use "../partials/colors" as *;
+@use "../partials/variables" as *;
 
-$mobile-long-padding: 24px;
-$mobile-short-padding: 16px;
-$desktop-long-padding: 48px;
-$desktop-short-padding: 36px;
+
+
+@mixin logo {
+    max-width: 120px;
+    min-width: 20px;
+    max-height: 20px;
+}
+
+@mixin mobile {
+    @media screen and (min-width: $mobile-break-point) {
+        @content;
+    }
+}
+@mixin tablet{
+    @media screen and (min-width: $tablet-break-point) {
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width: $desktop-break-point) {
+        @content;
+    }
+}
 
 
 body{
     @include mobile-body-footer-copy;
+    @include tablet{
+        @include desktop-body-copy;
+    }
+    @include desktop{
+        @include desktop-body-copy;
+    }
 }
 a{
     text-decoration: none;
 }
 .page-header, .section-header{
     @include mobile-page-section-header;
+    @include tablet{
+        @include desktop-page-header;
+    }
+    // @include desktop{
+    //     @include desktop-page-header;
+    // }
+}
+.section-header{
+    @include tablet{
+        @include desktop-section-header;
+    }
+    // @include desktop{
+    //     @include desktop-section-header;
+    // }
 }
 .sub-header{
     @include mobile-sub-header;
+    @include tablet{
+        @include desktop-subheader;
+    }
+    // @include desktop{
+    //     @include desktop-sub-header;
+    // }
 }
 .label{
-    @include mobile-label-button;
+    @include mobile-label-buttons;
+    @include tablet{
+        @include desktop-label-buttons;
+    }
+    // @include desktop{
+    //     @include desktop-label-button;
+    // }
+}
+footer{
+    @include tablet{
+        @include desktop-footer-copy;
+    }
+//     @include desktop{
+//         @include desktop-footer-copy;
+//     }
 }
 
-@mixin logo {
-    max-width: 120px;
-    max-height: 20px;
-}
+
+

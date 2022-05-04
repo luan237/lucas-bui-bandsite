@@ -35,6 +35,7 @@ body{
     @include desktop{
         @include desktop-body-copy;
     }
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;

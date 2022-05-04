@@ -16,9 +16,13 @@
         height: 7rem;
         justify-content: flex-start
     }
+    @include desktop{
+        padding-left: 2*$desktop-long-padding;
+    }
     &__logo{
-        @include logo;
+        // @include logo;
         padding: 1rem 0 0.5rem 0;
+        width: 12rem;
         @include tablet{
             padding-left: $desktop-short-padding;
             padding-right: $desktop-long-padding;
@@ -32,7 +36,8 @@
         @include tablet{
             width: auto;
             height: 100%;
-            align-items: center;
+            align-items: flex-end;
+            
         }
     }
     &__link{
@@ -53,19 +58,23 @@
         @include tablet{
             width: 100%;
             margin-right: $desktop-long-padding;
+            height: 42%;
         }
     }
 }
 // hero
 .hero{
     background-image: url(../assets/images/hero-bio.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 11rem;
+    height: 20rem;
     position: relative;
     overflow: hidden;
     @include tablet{
         height: 31.9rem;
+    }
+    @include desktop{
+     height: 80vh;
     }
     &__title{
         color: $color-white;
@@ -80,10 +89,13 @@
         @include tablet{
             padding-left: $desktop-short-padding;
         }
+        @include desktop{
+            padding-left: 3*$desktop-long-padding;
+        }
     }
 }
 // header margin
-header{
+.header{
     margin-bottom: $mobile-long-padding;
     @include tablet{
         margin-bottom: $desktop-long-padding;
@@ -94,29 +106,47 @@ header{
 // intro
 .intro{
     padding: 0 $mobile-short-padding;
+    display: flex;
+    flex-direction: column;
     @include tablet{
         padding: 0 $desktop-short-padding;
         position: relative;;
+    }
+    @include desktop{
+        padding: 0 3*$desktop-long-padding;
+    }
+    &__body{
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include desktop{
+            width: 86%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     &__images{
         width: 100%;
         padding-top: $mobile-short-padding;
         @include tablet{
-            width: 85%;
-            padding: $desktop-short-padding auto;
-            position: relative;
-            left: 7%;
+            width: 87%;
+            }
+        @include desktop{
+            height: 80%;
+            padding-top: $desktop-long-padding;
         }
     }
     &__slogan{
+        &--quote{
         padding-top: $mobile-short-padding;
+        }
         &--citation{
             padding-bottom: $mobile-long-padding;
             @include tablet{
                 padding-top: $desktop-short-padding;
                 padding-bottom: $desktop-long-padding;
-                padding-left: 5%;
-                padding-right: 6%;
             }
         }
         @include tablet{
@@ -136,6 +166,14 @@ header{
         &--reading{
             padding-bottom: $mobile-short-padding;
             font-weight: 400;
+            &:first-child{
+                @include tablet{
+                margin-right: 2rem;
+            }
+        }
+        @include tablet{
+            padding-bottom: $desktop-long-padding;
+        }
     }
         &--card{
             @include tablet{
@@ -152,6 +190,9 @@ header{
     @include tablet{
         padding: $desktop-short-padding $desktop-short-padding;
     }
+    @include desktop{
+        padding: $desktop-long-padding 3*$desktop-long-padding;
+    }
     &__pic{
         width: 100%;
         padding-bottom: $mobile-short-padding;
@@ -163,7 +204,7 @@ header{
     &__title{
         padding-bottom: $mobile-short-padding;
         @include tablet{
-            padding-top: $desktop-long-padding;
+            padding-top: $desktop-short-padding;
             padding-bottom: $desktop-long-padding;
             font-weight: 600;
         }
@@ -178,9 +219,41 @@ header{
         }
     }
 }
-footer{
+.footer{
     position: relative;
     width: 100%;
+    @include tablet{
+        height: 120%;
+        @include desktop-footer-copy;
+    }
+    &__blank{
+    height: 2rem;
+    display: none;
+    @include tablet{
+        display: block;
+    }
+    }
+    &__logo{
+        &--mobile{
+    padding-bottom: $mobile-short-padding;
+    padding-top: 3*$mobile-short-padding ;
+    @include tablet{
+        display: none;
+    }
+}
+    &--tablet{
+        display: none;
+        @include tablet{
+            display: block;
+            position: absolute;
+            width: 10rem;
+            right: $desktop-short-padding;
+            }
+        @include desktop{
+            right: 3*$desktop-long-padding
+        }
+    }
+}
 }
 .social{
     background-color: $color-black;
@@ -191,6 +264,10 @@ footer{
         padding-right: $desktop-short-padding;
         padding-top: $desktop-long-padding;
     }
+    @include desktop{
+        padding: $desktop-long-padding 3*$desktop-long-padding;
+    }
+
     &__media{
         @include tablet{
             display: flex;
@@ -221,7 +298,7 @@ footer{
         &--pic{
             @include tablet{
                 width: 40px;
-                max-height: 40px;
+                max-height: 32px;
             }
         }
     }
@@ -235,19 +312,33 @@ footer{
         &--email{
             color: $color-white;
         }
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: $desktop-long-padding 0;
+        }
+        &--person{
+            @include tablet{
+            padding: 0 .2rem;
+            padding-right: $desktop-short-padding;
+        }
     }
+        &--name{
+            @include tablet{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+        @include desktop{
+            font-size: 16px;
+        }
+        }
     &__copyright{
         padding-top: 20%;
+        @include tablet{
+            height: 5rem;
+        }
     }
 }
-.footer__logo{
-    position: absolute;
-    bottom: 7%;
-    padding-left: 16px;
-    @include tablet{
-        bottom: 0;
-        top: 4rem;
-        right: 3.5rem;
-        width: 15%;
-    }
 }

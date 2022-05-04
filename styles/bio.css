@@ -71,21 +71,22 @@ body {
 }
 
 body {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 768px) {
   body {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 400;
   }
 }
 @media screen and (min-width: 1280px) {
   body {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 400;
   }
 }
@@ -95,9 +96,9 @@ a {
 }
 
 .page-header, .section-header {
-  font-size: 24px;
+  font-size: 34px;
   line-height: 32px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .page-header, .section-header {
@@ -111,25 +112,25 @@ a {
   .section-header {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
 .sub-header {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 34px;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .sub-header {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 36px;
     font-weight: 600;
   }
 }
 
 .label {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 700;
 }
@@ -143,8 +144,8 @@ a {
 
 @media screen and (min-width: 768px) {
   footer {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 28px;
     font-weight: 400;
   }
 }
@@ -164,11 +165,14 @@ a {
     justify-content: flex-start;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav {
+    padding-left: 96px;
+  }
+}
 .nav__logo {
-  max-width: 120px;
-  min-width: 20px;
-  max-height: 20px;
   padding: 1rem 0 0.5rem 0;
+  width: 12rem;
 }
 @media screen and (min-width: 768px) {
   .nav__logo {
@@ -186,7 +190,7 @@ a {
   .nav__items {
     width: auto;
     height: 100%;
-    align-items: center;
+    align-items: flex-end;
   }
 }
 .nav__link {
@@ -209,20 +213,26 @@ a {
   .nav__link {
     width: 100%;
     margin-right: 48px;
+    height: 42%;
   }
 }
 
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 11rem;
+  height: 20rem;
   position: relative;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .hero {
     height: 31.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
   }
 }
 .hero__title {
@@ -234,25 +244,32 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 16px;
+  padding-left: 20px;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     padding-left: 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 144px;
+  }
+}
 
-header {
+.header {
   margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
-  header {
+  .header {
     margin-bottom: 48px;
   }
 }
 
 .intro {
-  padding: 0 16px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .intro {
@@ -260,20 +277,42 @@ header {
     position: relative;
   }
 }
+@media screen and (min-width: 1280px) {
+  .intro {
+    padding: 0 144px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .intro__body {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .intro__images {
   width: 100%;
-  padding-top: 16px;
+  padding-top: 20px;
 }
 @media screen and (min-width: 768px) {
   .intro__images {
-    width: 85%;
-    padding: 36px auto;
-    position: relative;
-    left: 7%;
+    width: 87%;
   }
 }
-.intro__slogan {
-  padding-top: 16px;
+@media screen and (min-width: 1280px) {
+  .intro__images {
+    height: 80%;
+    padding-top: 48px;
+  }
+}
+.intro__slogan--quote {
+  padding-top: 20px;
 }
 .intro__slogan--citation {
   padding-bottom: 24px;
@@ -282,8 +321,6 @@ header {
   .intro__slogan--citation {
     padding-top: 36px;
     padding-bottom: 48px;
-    padding-left: 5%;
-    padding-right: 6%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -300,11 +337,21 @@ header {
   }
 }
 .intro__content--title {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 .intro__content--reading {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .intro__content--reading:first-child {
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro__content--reading {
+    padding-bottom: 48px;
+  }
 }
 @media screen and (min-width: 768px) {
   .intro__content--card {
@@ -315,7 +362,7 @@ header {
 }
 
 .gallery {
-  padding: 16px 16px;
+  padding: 20px 20px;
   background-color: #fafafa;
 }
 @media screen and (min-width: 768px) {
@@ -323,9 +370,14 @@ header {
     padding: 36px 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .gallery {
+    padding: 48px 144px;
+  }
+}
 .gallery__pic {
   width: 100%;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .gallery__pic {
@@ -334,11 +386,11 @@ header {
   }
 }
 .gallery__title {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .gallery__title {
-    padding-top: 48px;
+    padding-top: 36px;
     padding-bottom: 48px;
     font-weight: 600;
   }
@@ -353,21 +405,68 @@ header {
   }
 }
 
-footer {
+.footer {
   position: relative;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 120%;
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.footer__blank {
+  height: 2rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__blank {
+    display: block;
+  }
+}
+.footer__logo--mobile {
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+.footer__logo--tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo--tablet {
+    display: block;
+    position: absolute;
+    width: 10rem;
+    right: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo--tablet {
+    right: 144px;
+  }
 }
 
 .social {
   background-color: #323232;
   color: #ffffff;
-  padding: 24px 16px 16px 16px;
+  padding: 24px 20px 20px 20px;
 }
 @media screen and (min-width: 768px) {
   .social {
     padding-left: 36px;
     padding-right: 36px;
     padding-top: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social {
+    padding: 48px 144px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -378,7 +477,7 @@ footer {
   }
 }
 .social__media > * {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 .social__media--list {
   display: flex;
@@ -402,32 +501,49 @@ footer {
 @media screen and (min-width: 768px) {
   .social__media--pic {
     width: 40px;
-    max-height: 40px;
+    max-height: 32px;
   }
 }
 .social__contact > * {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 .social__contact > * > * {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 .social__contact--email {
   color: #ffffff;
 }
-.social__copyright {
-  padding-top: 20%;
-}
-
-.footer__logo {
-  position: absolute;
-  bottom: 7%;
-  padding-left: 16px;
+@media screen and (min-width: 768px) {
+  .social__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 48px 0;
+  }
 }
 @media screen and (min-width: 768px) {
-  .footer__logo {
-    bottom: 0;
-    top: 4rem;
-    right: 3.5rem;
-    width: 15%;
+  .social__contact--person {
+    padding: 0 0.2rem;
+    padding-right: 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social__contact--name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__contact--name {
+    font-size: 16px;
+  }
+}
+.social__contact__copyright {
+  padding-top: 20%;
+}
+@media screen and (min-width: 768px) {
+  .social__contact__copyright {
+    height: 5rem;
   }
 }/*# sourceMappingURL=bio.css.map */

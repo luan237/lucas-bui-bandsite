@@ -39,21 +39,21 @@ $regular-size: 400;
 @mixin desktop-section-header{
     font-size: 36px;
     line-height: 44px;
-    font-weight: $bold;
+    font-weight: $demi
 }
 @mixin desktop-subheader{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 36px;
     font-weight: $demi;
 }
 @mixin desktop-body-copy{
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: $regular-size;
 }
 @mixin desktop-footer-copy{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 28px;
     font-weight: $regular-size;
 }
 @mixin desktop-label-buttons{
@@ -63,22 +63,22 @@ $regular-size: 400;
 }
 
 @mixin mobile-page-section-header {
-    font-size: 24px;
+    font-size: 34px;
     line-height: 32px;
-    font-weight: $bold;
+    font-weight: $demi;
 }
 @mixin mobile-sub-header {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 34px;
     font-weight: $demi;
 }
 @mixin mobile-body-footer-copy {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: $regular-size;
 }
 @mixin mobile-label-buttons {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 20px;
     font-weight: $bold;
 }

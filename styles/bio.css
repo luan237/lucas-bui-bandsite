@@ -71,22 +71,22 @@ body {
 }
 
 body {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 400;
   overflow-x: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   body {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
     font-weight: 400;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   body {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
     font-weight: 400;
   }
 }
@@ -96,56 +96,56 @@ a {
 }
 
 .page-header, .section-header {
-  font-size: 34px;
-  line-height: 32px;
+  font-size: 2.125rem;
+  line-height: 2rem;
   font-weight: 600;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .page-header, .section-header {
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 4.25rem;
+    font-weight: 600;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .section-header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.95rem;
+    line-height: 2.75rem;
     font-weight: 600;
   }
 }
 
 .sub-header {
-  font-size: 20px;
-  line-height: 34px;
+  font-size: 1.25rem;
+  line-height: 2.125rem;
   font-weight: 600;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .sub-header {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 1.7rem;
+    line-height: 2.25rem;
     font-weight: 600;
   }
 }
 
 .label {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .label {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     font-weight: 700;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   footer {
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 1.0625rem;
+    line-height: 1.75rem;
     font-weight: 400;
   }
 }
@@ -158,26 +158,26 @@ a {
   align-items: center;
   color: #ffffff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .nav {
     flex-direction: row;
     height: 7rem;
     justify-content: flex-start;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .nav {
-    padding-left: 96px;
+    padding-left: 9rem;
   }
 }
 .nav__logo {
   padding: 1rem 0 0.5rem 0;
-  width: 12rem;
+  width: 10rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .nav__logo {
-    padding-left: 36px;
-    padding-right: 48px;
+    padding-left: 2.25rem;
+    padding-right: 4.5rem;
   }
 }
 .nav__items {
@@ -186,7 +186,7 @@ a {
   justify-content: space-around;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .nav__items {
     width: auto;
     height: 100%;
@@ -195,7 +195,7 @@ a {
 }
 .nav__link {
   color: #e1e1e1;
-  padding-bottom: 1rem;
+  padding-bottom: 1.35rem;
   width: 50%;
   text-align: center;
 }
@@ -205,14 +205,16 @@ a {
 }
 .nav__link:hover {
   color: #ffffff;
+  font-weight: 600;
 }
 .nav__link--highlight {
   border-bottom: 2px solid #ffffff;
+  font-weight: 600;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .nav__link {
     width: 100%;
-    margin-right: 48px;
+    margin-right: 3rem;
     height: 42%;
   }
 }
@@ -225,12 +227,12 @@ a {
   position: relative;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .hero {
     height: 31.9rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .hero {
     height: 80vh;
   }
@@ -244,116 +246,119 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .hero__title {
-    padding-left: 36px;
+    padding-left: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .hero__title {
-    padding-left: 144px;
+    padding-left: 9rem;
   }
 }
 
 .header {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .header {
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
   }
 }
 
 .intro {
-  padding: 0 20px;
+  padding: 0 1.25rem;
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro {
-    padding: 0 36px;
+    padding: 0 2.25rem;
     position: relative;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .intro {
-    padding: 0 144px;
+    padding: 0 11rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .intro__body {
-    width: 86%;
+    max-width: 96%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 .intro__images {
   width: 100%;
-  padding-top: 20px;
+  padding-top: 1.25rem;
+  aspect-ratio: 17/9;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__images {
     width: 87%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .intro__images {
     height: 80%;
-    padding-top: 48px;
+    padding-top: 3rem;
   }
 }
 .intro__slogan--quote {
-  padding-top: 20px;
+  padding-top: 1.25rem;
+  color: #323232;
 }
 .intro__slogan--citation {
-  padding-bottom: 24px;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__slogan--citation {
-    padding-top: 36px;
-    padding-bottom: 48px;
+    padding-top: 2.25rem;
+    padding-bottom: 3rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__slogan {
-    padding-top: 36px;
+    padding-top: 2.25rem;
     padding-left: 5%;
     padding-right: 6%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__content {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 .intro__content--title {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .intro__content--reading {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   font-weight: 400;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__content--reading:first-child {
     margin-right: 2rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__content--reading {
-    padding-bottom: 48px;
+    padding-bottom: 3rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .intro__content--card {
     display: flex;
     flex-direction: row;
@@ -362,40 +367,40 @@ a {
 }
 
 .gallery {
-  padding: 20px 20px;
+  padding: 1.25rem 1.25rem;
   background-color: #fafafa;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .gallery {
-    padding: 36px 36px;
+    padding: 2.25rem 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .gallery {
-    padding: 48px 144px;
+    padding: 3rem 11rem;
   }
 }
 .gallery__pic {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .gallery__pic {
     width: 31%;
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
   }
 }
 .gallery__title {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .gallery__title {
-    padding-top: 36px;
-    padding-bottom: 48px;
+    padding-top: 2.25rem;
+    padding-bottom: 3rem;
     font-weight: 600;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .gallery__list {
     display: flex;
     flex-direction: row;
@@ -409,11 +414,11 @@ a {
   position: relative;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .footer {
     height: 120%;
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 1.0625rem;
+    line-height: 1.75rem;
     font-weight: 400;
   }
 }
@@ -421,16 +426,16 @@ a {
   height: 2rem;
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .footer__blank {
     display: block;
   }
 }
 .footer__logo--mobile {
-  padding-bottom: 20px;
-  padding-top: 60px;
+  padding-bottom: 1.25rem;
+  padding-top: 3.75rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .footer__logo--mobile {
     display: none;
   }
@@ -438,38 +443,38 @@ a {
 .footer__logo--tablet {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .footer__logo--tablet {
     display: block;
     position: absolute;
     width: 10rem;
-    right: 36px;
+    right: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .footer__logo--tablet {
-    right: 144px;
+    right: 9rem;
   }
 }
 
 .social {
   background-color: #323232;
   color: #ffffff;
-  padding: 24px 20px 20px 20px;
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social {
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 48px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 3rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .social {
-    padding: 48px 144px;
+    padding: 3rem 9rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__media {
     display: flex;
     flex-direction: row;
@@ -477,7 +482,7 @@ a {
   }
 }
 .social__media > * {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .social__media--list {
   display: flex;
@@ -485,7 +490,7 @@ a {
   justify-content: flex-start;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__media--list {
     padding-left: 2rem;
   }
@@ -493,56 +498,61 @@ a {
 .social__media--link {
   margin-right: 2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__media--title {
     font-weight: 600;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__media--pic {
     width: 40px;
     max-height: 32px;
   }
 }
 .social__contact > * {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .social__contact > * > * {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .social__contact--email {
   color: #ffffff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__contact {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 48px 0;
+    padding: 3rem 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__contact--person {
     padding: 0 0.2rem;
-    padding-right: 36px;
+    padding-right: 5rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 80rem) {
+  .social__contact--person {
+    padding-right: 3.55rem;
+  }
+}
+@media screen and (min-width: 48rem) {
   .social__contact--name {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .social__contact--name {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .social__contact__copyright {
   padding-top: 20%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .social__contact__copyright {
     height: 5rem;
   }

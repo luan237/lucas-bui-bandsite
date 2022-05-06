@@ -32,53 +32,53 @@ $regular-size: 400;
 
 // font setup
 @mixin desktop-page-header{
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: $bold;
+    font-size: 4.8rem;
+    line-height: 4.25rem;
+    font-weight: $demi;
 }
 @mixin desktop-section-header{
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.95rem;
+    line-height: 2.75rem;
     font-weight: $demi
 }
 @mixin desktop-subheader{
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 1.7rem;
+    line-height: 2.25rem;
     font-weight: $demi;
 }
 @mixin desktop-body-copy{
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
     font-weight: $regular-size;
 }
 @mixin desktop-footer-copy{
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 1.0625rem;
+    line-height: 1.75rem;
     font-weight: $regular-size;
 }
 @mixin desktop-label-buttons{
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     font-weight: $bold;
 }
 
 @mixin mobile-page-section-header {
-    font-size: 34px;
-    line-height: 32px;
+    font-size: 2.125rem;
+    line-height: 2rem;
     font-weight: $demi;
 }
 @mixin mobile-sub-header {
-    font-size: 20px;
-    line-height: 34px;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
     font-weight: $demi;
 }
 @mixin mobile-body-footer-copy {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
     font-weight: $regular-size;
 }
 @mixin mobile-label-buttons {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: $bold;
 }

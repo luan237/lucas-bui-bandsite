@@ -17,15 +17,15 @@
         justify-content: flex-start
     }
     @include desktop{
-        padding-left: 2*$desktop-long-padding;
+        padding-left: 3*$desktop-long-padding;
     }
     &__logo{
         // @include logo;
         padding: 1rem 0 0.5rem 0;
-        width: 12rem;
+        width: 10rem;
         @include tablet{
             padding-left: $desktop-short-padding;
-            padding-right: $desktop-long-padding;
+            padding-right: 2*$desktop-short-padding;
         }
     }
     &__items{
@@ -42,7 +42,7 @@
     }
     &__link{
         color: $color-mercury;
-        padding-bottom: 1rem;
+        padding-bottom: 1.35rem;
         width: 50%;
         text-align: center;
         &:active{
@@ -51,9 +51,11 @@
         }
         &:hover{
             color: $color-white;
+            font-weight: $demi;
         }
         &--highlight{
             border-bottom: 2px solid $color-white;
+            font-weight: $demi;
         }
         @include tablet{
             width: 100%;
@@ -113,7 +115,7 @@
         position: relative;;
     }
     @include desktop{
-        padding: 0 3*$desktop-long-padding;
+        padding: 0 11rem;
     }
     &__body{
         @include tablet{
@@ -122,7 +124,7 @@
             align-items: center;
         }
         @include desktop{
-            width: 86%;
+            max-width: 96%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -130,6 +132,7 @@
     &__images{
         width: 100%;
         padding-top: $mobile-short-padding;
+        aspect-ratio: 17 / 9;
         @include tablet{
             width: 87%;
             }
@@ -141,8 +144,10 @@
     &__slogan{
         &--quote{
         padding-top: $mobile-short-padding;
+        color: $color-black;
         }
         &--citation{
+            font-weight: $demi;
             padding-bottom: $mobile-long-padding;
             @include tablet{
                 padding-top: $desktop-short-padding;
@@ -191,7 +196,7 @@
         padding: $desktop-short-padding $desktop-short-padding;
     }
     @include desktop{
-        padding: $desktop-long-padding 3*$desktop-long-padding;
+        padding: $desktop-long-padding 11rem;
     }
     &__pic{
         width: 100%;
@@ -320,9 +325,12 @@
         }
         &--person{
             @include tablet{
-            padding: 0 .2rem;
-            padding-right: $desktop-short-padding;
+            padding: 0 0.2rem;
+            padding-right: 5rem;
         }
+            @include desktop{
+                padding-right: 3.55rem;
+            }
     }
         &--name{
             @include tablet{
@@ -331,7 +339,7 @@
             font-weight: 600;
         }
         @include desktop{
-            font-size: 16px;
+            font-size: 18px;
         }
         }
     &__copyright{

@@ -5,9 +5,9 @@
 
 
 @mixin logo {
-    max-width: 120px;
-    min-width: 20px;
-    max-height: 20px;
+    max-width: 7.5rem;
+    min-width: 1.25rem;
+    max-height: 1.25rem;
 }
 
 @mixin mobile {
@@ -45,43 +45,28 @@ a{
     @include tablet{
         @include desktop-page-header;
     }
-    // @include desktop{
-    //     @include desktop-page-header;
-    // }
 }
 .section-header{
     @include tablet{
         @include desktop-section-header;
     }
-    // @include desktop{
-    //     @include desktop-section-header;
-    // }
 }
 .sub-header{
     @include mobile-sub-header;
     @include tablet{
         @include desktop-subheader;
-    }
-    // @include desktop{
-    //     @include desktop-sub-header;
-    // }
+        }
 }
 .label{
     @include mobile-label-buttons;
     @include tablet{
         @include desktop-label-buttons;
     }
-    // @include desktop{
-    //     @include desktop-label-button;
-    // }
 }
 footer{
     @include tablet{
         @include desktop-footer-copy;
     }
-//     @include desktop{
-//         @include desktop-footer-copy;
-//     }
 }
 
 

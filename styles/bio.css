@@ -255,7 +255,7 @@ a {
 }
 @media screen and (min-width: 80rem) {
   .hero__title {
-    padding-left: 9rem;
+    padding-left: 12rem;
   }
 }
 

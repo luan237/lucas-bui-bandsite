@@ -92,7 +92,7 @@
             padding-left: $desktop-short-padding;
         }
         @include desktop{
-            padding-left: 3*$desktop-long-padding;
+            padding-left: 12rem;
         }
     }
 }

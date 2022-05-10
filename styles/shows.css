@@ -1,1 +1,180 @@
-/*# sourceMappingURL=shows.css.map */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../../assets/fonts/Alternative\ files/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../../assets/fonts/Alternative\ files/AvenirNextLTPro-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype"), url(../../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  font-family: "Avenir Next";
+}
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 48rem) {
+  body {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 80rem) {
+  body {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-header, .section-header {
+  font-size: 2.125rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 48rem) {
+  .page-header, .section-header {
+    font-size: 4.8rem;
+    line-height: 4.25rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .section-header {
+    font-size: 2.95rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
+}
+
+.sub-header {
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 48rem) {
+  .sub-header {
+    font-size: 1.7rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+  }
+}
+
+.label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 48rem) {
+  .label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  footer {
+    font-size: 1.0625rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+}
+
+.hero__shows {
+  color: #ffffff;
+  background-image: url(../assets/images/hero-shows.jpg);
+  height: 27rem;
+  z-index: 0;
+}
+.hero__shows--background {
+  background-color: rgba(32, 32, 32, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.hero__shows--background > * {
+  margin-left: 1.25rem;
+}
+.hero__shows--title {
+  z-index: 2;
+  position: relative;
+}
+.hero__shows--iframe {
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=shows.css.map */

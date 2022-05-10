@@ -32,3 +32,34 @@
         margin-right: auto;
     }
 }
+.main-show{
+    padding: 0 $mobile-long-padding;
+    &__header{
+        padding-bottom: $mobile-long-padding;
+        padding-top: $mobile-long-padding;
+    }
+}
+.info{
+   &__container{
+       width: 100%;
+       border-bottom: 2px solid $color-mercury;
+   }
+   &__tag{
+       color: $color-silver;
+       padding-top: 1rem;
+   }
+   &__content{
+       &--bold{
+           font-weight: 600;
+       }
+   }
+   &__ticket{
+       width: 100%;
+       height: 4rem;
+       margin: 2rem 0;
+       background-color: $color-black;
+       color: $color-white;
+       border-radius: .5rem;
+       border: 0;
+   }
+}

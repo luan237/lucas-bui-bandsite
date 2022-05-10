@@ -177,4 +177,33 @@ a {
   border-radius: 0.5rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-show {
+  padding: 0 1.5rem;
+}
+.main-show__header {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.info__container {
+  width: 100%;
+  border-bottom: 2px solid #e1e1e1;
+}
+.info__tag {
+  color: #afafaf;
+  padding-top: 1rem;
+}
+.info__content--bold {
+  font-weight: 600;
+}
+.info__ticket {
+  width: 100%;
+  height: 4rem;
+  margin: 2rem 0;
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: 0;
 }/*# sourceMappingURL=shows.css.map */

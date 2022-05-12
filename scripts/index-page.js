@@ -24,6 +24,11 @@ let fans = document.querySelector(".fans");
 let commentContainer = document.createElement("form");
 commentContainer.classList.add("fans__container");
 fans.appendChild(commentContainer);
+// input avatar
+let fanAvatar = document.createElement("img");
+fanAvatar.classList.add("fans__container--avatar");
+fanAvatar.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
+commentContainer.appendChild(fanAvatar);
 // input name
 let fanNameLabel = document.createElement("label");
 fanNameLabel.classList.add("fans__container--label");
@@ -52,13 +57,47 @@ fanSubmit.classList.add("fans__container--submit");
 fanSubmit.innerText = "COMMENT";
 commentContainer.appendChild(fanSubmit);
 
+// let savedContainer = document.createElement("div");
+// savedContainer.classList.add("fans__saved");
+// fans.appendChild(savedContainer);
+// let savedAvatar = document.createElement("img");
+// savedAvatar.classList.add("fan__saved--avatar");
+// savedContainer.appendChild(savedAvatar);
+// let savedName = document.createElement("p");
+// savedName.classList.add("fan__saved--name");
+// savedContainer.appendChild(savedName);
+// let savedTime = document.createElement("p");
+// savedTime.classList.add("fan__saved--time");
+// savedContainer.appendChild(savedTime);
+// let savedComment = document.createElement("p");
+// savedComment.classList.add("fan__saved--name");
+// savedContainer.appendChild(savedComment);
+
+// savedName.textContent = comments[i].name;
+// savedComment.textContent = comments[i].comment;
+
 commentContainer.addEventListener("submit", (e) => {
   e.preventDefault();
-//   for (let i = 0; i < comments.length; i++) {
-//     let savedComment = document.createElement('div')
-//     savedComment.classList.add("fans__saved")
-//     fans.appendChild(savedComment)
-//     let savedName = document.createElement('p')
-//     savedName.classList.add("fan__")
-//   }
-// });
+  // });
+  for (let i = 0; i < comments.length; i++) {
+    let savedContainer = document.createElement("div");
+    savedContainer.classList.add("fans__saved");
+    fans.appendChild(savedContainer);
+    let savedAvatar = document.createElement("img");
+    savedAvatar.classList.add("fan__saved--avatar");
+    savedContainer.appendChild(savedAvatar);
+    let savedName = document.createElement("p");
+    savedName.classList.add("fan__saved--name");
+    savedContainer.appendChild(savedName);
+    let savedTime = document.createElement("p");
+    savedTime.classList.add("fan__saved--time");
+    savedContainer.appendChild(savedTime);
+    let savedComment = document.createElement("p");
+    savedComment.classList.add("fan__saved--name");
+    savedContainer.appendChild(savedComment);
+
+    savedName.textContent = comments[i].name;
+    savedComment.textContent = comments[i].comment;
+    savedTime.textContent = new Date();
+  }
+});

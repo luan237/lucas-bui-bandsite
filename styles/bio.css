@@ -575,4 +575,10 @@ a {
   display: block;
   width: 60%;
   height: 50%;
+}
+.fans__container--avatar {
+  width: 60px;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }/*# sourceMappingURL=bio.css.map */

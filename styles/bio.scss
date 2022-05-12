@@ -350,3 +350,22 @@
     }
 }
 }
+
+.fans{
+    width: 90%;
+    height: 50rem;
+    &__container{
+        height: 30%;
+        width: 100%;
+        border: 3px solid black;
+        display: block;
+        &--name{
+            display: block;
+        }
+        &--comment{
+            display: block;
+            width: 60%;
+            height: 50%;
+        }
+    }
+}

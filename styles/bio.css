@@ -556,4 +556,23 @@ a {
   .social__contact__copyright {
     height: 5rem;
   }
+}
+
+.fans {
+  width: 90%;
+  height: 50rem;
+}
+.fans__container {
+  height: 30%;
+  width: 100%;
+  border: 3px solid black;
+  display: block;
+}
+.fans__container--name {
+  display: block;
+}
+.fans__container--comment {
+  display: block;
+  width: 60%;
+  height: 50%;
 }/*# sourceMappingURL=bio.css.map */

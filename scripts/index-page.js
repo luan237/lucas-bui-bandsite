@@ -18,44 +18,45 @@ comments = [
       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
 ];
-// grab fan section
-let fans = document.querySelector(".fans");
-// loop for every comments
-let commentContainer = document.createElement("form");
-commentContainer.classList.add("fans__container");
-fans.appendChild(commentContainer);
-// input avatar
-let fanAvatar = document.createElement("img");
-fanAvatar.classList.add("fans__container--avatar");
-fanAvatar.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
-commentContainer.appendChild(fanAvatar);
-// input name
-let fanNameLabel = document.createElement("label");
-fanNameLabel.classList.add("fans__container--label");
-commentContainer.appendChild(fanNameLabel);
-fanNameLabel.innerText = "NAME";
-let fanName = document.createElement("input");
-fanName.classList.add("fans__container--name");
-fanName.setAttribute("type", "text");
-fanName.setAttribute("name", "name");
-fanName.setAttribute("placeholder", "Enter your name");
-fanNameLabel.appendChild(fanName);
-// input comment
-let fanCommentLabel = document.createElement("label");
-fanCommentLabel.classList.add("fans__container--label");
-let fanComment = document.createElement("input");
-commentContainer.appendChild(fanCommentLabel);
-fanCommentLabel.innerText = "COMMENT";
-fanComment.classList.add("fans__container--comment");
-fanComment.setAttribute("type", "text");
-fanComment.setAttribute("name", "comment");
-fanComment.setAttribute("placeholder", "Add a new comment");
-fanCommentLabel.appendChild(fanComment);
-// submit button
-let fanSubmit = document.createElement("button");
-fanSubmit.classList.add("fans__container--submit");
-fanSubmit.innerText = "COMMENT";
-commentContainer.appendChild(fanSubmit);
+
+// // grab fan section
+// let fans = document.querySelector(".fans");
+// // loop for every comments
+// let commentContainer = document.createElement("form");
+// commentContainer.classList.add("fans__container");
+// fans.appendChild(commentContainer);
+// // input avatar
+// let fanAvatar = document.createElement("img");
+// fanAvatar.classList.add("fans__container--avatar");
+// fanAvatar.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
+// commentContainer.appendChild(fanAvatar);
+// // input name
+// let fanNameLabel = document.createElement("label");
+// fanNameLabel.classList.add("fans__container--label");
+// commentContainer.appendChild(fanNameLabel);
+// fanNameLabel.innerText = "NAME";
+// let fanName = document.createElement("input");
+// fanName.classList.add("fans__container--name");
+// fanName.setAttribute("type", "text");
+// fanName.setAttribute("name", "name");
+// fanName.setAttribute("placeholder", "Enter your name");
+// fanNameLabel.appendChild(fanName);
+// // input comment
+// let fanCommentLabel = document.createElement("label");
+// fanCommentLabel.classList.add("fans__container--label");
+// let fanComment = document.createElement("input");
+// commentContainer.appendChild(fanCommentLabel);
+// fanCommentLabel.innerText = "COMMENT";
+// fanComment.classList.add("fans__container--comment");
+// fanComment.setAttribute("type", "text");
+// fanComment.setAttribute("name", "comment");
+// fanComment.setAttribute("placeholder", "Add a new comment");
+// fanCommentLabel.appendChild(fanComment);
+// // submit button
+// let fanSubmit = document.createElement("button");
+// fanSubmit.classList.add("fans__container--submit");
+// fanSubmit.innerText = "COMMENT";
+// commentContainer.appendChild(fanSubmit);
 
 // let savedContainer = document.createElement("div");
 // savedContainer.classList.add("fans__saved");
@@ -76,28 +77,28 @@ commentContainer.appendChild(fanSubmit);
 // savedName.textContent = comments[i].name;
 // savedComment.textContent = comments[i].comment;
 
-commentContainer.addEventListener("submit", (e) => {
-  e.preventDefault();
-  // });
-  for (let i = 0; i < comments.length; i++) {
-    let savedContainer = document.createElement("div");
-    savedContainer.classList.add("fans__saved");
-    fans.appendChild(savedContainer);
-    let savedAvatar = document.createElement("img");
-    savedAvatar.classList.add("fan__saved--avatar");
-    savedContainer.appendChild(savedAvatar);
-    let savedName = document.createElement("p");
-    savedName.classList.add("fan__saved--name");
-    savedContainer.appendChild(savedName);
-    let savedTime = document.createElement("p");
-    savedTime.classList.add("fan__saved--time");
-    savedContainer.appendChild(savedTime);
-    let savedComment = document.createElement("p");
-    savedComment.classList.add("fan__saved--name");
-    savedContainer.appendChild(savedComment);
+// commentContainer.addEventListener("submit", (e) => {
+//   e.preventDefault();
+// });
+for (let i = 0; i < comments.length; i++) {
+  let savedContainer = document.createElement("div");
+  savedContainer.classList.add("fans__saved");
+  fans.appendChild(savedContainer);
+  let savedAvatar = document.createElement("img");
+  savedAvatar.classList.add("fan__saved--avatar");
+  savedContainer.appendChild(savedAvatar);
+  let savedName = document.createElement("p");
+  savedName.classList.add("fan__saved--name");
+  savedContainer.appendChild(savedName);
+  let savedTime = document.createElement("p");
+  savedTime.classList.add("fan__saved--time");
+  savedContainer.appendChild(savedTime);
+  let savedComment = document.createElement("p");
+  savedComment.classList.add("fan__saved--name");
+  savedContainer.appendChild(savedComment);
 
-    savedName.textContent = comments[i].name;
-    savedComment.textContent = comments[i].comment;
-    savedTime.textContent = new Date();
-  }
-});
+  savedName.textContent = comments[i].name;
+  savedComment.textContent = comments[i].comment;
+  savedTime.textContent = new Date();
+}
+// });

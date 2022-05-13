@@ -354,24 +354,59 @@
 .fans{
     width: 90%;
     height: 50rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     &__container{
         height: 30%;
         width: 100%;
         border: 3px solid black;
-        display: block;
+        display: flex;
+        // flex-direction: column;
+        margin: 0 auto;
+        &--section{
+            display: flex;
+            flex-direction: column;
+            & > *{
+                display: flex;
+                flex-direction: column;
+            }
+        }
         &--name{
             display: block;
         }
         &--comment{
-            display: block;
+            // display: flex;
+            // flex-direction: column;
             width: 60%;
             height: 50%;
         }
         &--avatar{
             width  : 60px;
-            height: auto;
+            height: 60px;
             aspect-ratio: 1/1;
             border-radius: 50%;
+        }
+    }
+    &__saved{
+        margin-top: 2rem;
+        overflow: scroll;
+        &--content{
+        border-top: 1px solid $color-silver;
+        border-bottom: 1px solid $color-silver;
+        }
+        &--avatar{
+            float: left;
+        }
+        &--info{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        &--comment{
+            margin-left: 5rem;
         }
     }
 }

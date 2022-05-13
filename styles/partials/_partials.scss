@@ -10,11 +10,7 @@
     max-height: 1.25rem;
 }
 
-@mixin mobile {
-    @media screen and (min-width: $mobile-break-point) {
-        @content;
-    }
-}
+
 @mixin tablet{
     @media screen and (min-width: $tablet-break-point) {
         @content;

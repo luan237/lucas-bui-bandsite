@@ -68,17 +68,14 @@ footer{
 @mixin comment{
     background-color: $color-alabaster;
     color: $color-black;
-    border: 1px solid $color-mercury;
-    border-radius: 4px;
+    border: 0.0625rem solid $color-mercury;
+    border-radius: 0.25rem;
     &:focus{
-    border: 1px solid $color-black;
+    border: 0.0625rem solid $color-black;
     outline: none;
 
     }
-    // &:active{
-    // border: 1px solid $color-black;
-    // outline: none;
-    // }
 }
+
 
 

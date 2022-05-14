@@ -97,7 +97,7 @@ a {
 
 .page-header, .section-header {
   font-size: 2.125rem;
-  line-height: 2rem;
+  line-height: 3rem;
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
@@ -177,19 +177,28 @@ a {
   border-radius: 0.5rem;
   margin-left: auto;
   margin-right: auto;
+  width: 90%;
 }
 
 .main-show {
-  padding: 0 1.5rem;
+  padding: 0;
 }
 .main-show__header {
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
 }
 
+.info {
+  padding: 0 1.5rem;
+}
 .info__container {
   width: 100%;
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 0.125rem solid #e1e1e1;
+}
+.info__container:hover {
+  background-color: #fafafa;
+}
+.info__container--selected {
+  background-color: #fafafa;
 }
 .info__tag {
   color: #afafaf;

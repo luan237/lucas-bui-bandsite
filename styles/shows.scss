@@ -30,19 +30,26 @@
         border-radius: .5rem;
         margin-left: auto;
         margin-right: auto;
+        width: 90%;
     }
 }
 .main-show{
-    padding: 0 $mobile-long-padding;
+    padding: 0;
     &__header{
-        padding-bottom: $mobile-long-padding;
-        padding-top: $mobile-long-padding;
+        padding: $mobile-long-padding;
     }
 }
 .info{
+    padding: 0 $mobile-long-padding;
    &__container{
        width: 100%;
-       border-bottom: 2px solid $color-mercury;
+       border-bottom: 0.125rem solid $color-mercury;
+       &:hover{
+           background-color: $color-alabaster;
+       }
+       &--selected{
+           background-color: $color-alabaster;
+       }
    }
    &__tag{
        color: $color-silver;

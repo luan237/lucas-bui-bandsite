@@ -37,7 +37,7 @@ $regular-size: 400;
     font-weight: $demi;
 }
 @mixin desktop-section-header{
-    font-size: 2.95rem;
+    font-size: 3.35rem;
     line-height: 2.75rem;
     font-weight: $demi
 }
@@ -47,13 +47,13 @@ $regular-size: 400;
     font-weight: $demi;
 }
 @mixin desktop-body-copy{
-    font-size: 1.15rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: $regular-size;
 }
 @mixin desktop-footer-copy{
-    font-size: 1.0625rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: $regular-size;
 }
 @mixin desktop-label-buttons{

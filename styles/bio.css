@@ -76,17 +76,10 @@ body {
   font-weight: 400;
   overflow-x: hidden;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   body {
-    font-size: 1.15rem;
-    line-height: 1.75rem;
-    font-weight: 400;
-  }
-}
-@media screen and (min-width: 80rem) {
-  body {
-    font-size: 1.15rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: 400;
   }
 }
@@ -100,7 +93,7 @@ a {
   line-height: 3rem;
   font-weight: 600;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .page-header, .section-header {
     font-size: 4.8rem;
     line-height: 4.25rem;
@@ -108,9 +101,9 @@ a {
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .section-header {
-    font-size: 2.95rem;
+    font-size: 3.35rem;
     line-height: 2.75rem;
     font-weight: 600;
   }
@@ -121,7 +114,7 @@ a {
   line-height: 2.125rem;
   font-weight: 600;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .sub-header {
     font-size: 1.7rem;
     line-height: 2.25rem;
@@ -134,7 +127,7 @@ a {
   line-height: 1.25rem;
   font-weight: 700;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .label {
     font-size: 0.75rem;
     line-height: 1.25rem;
@@ -142,10 +135,10 @@ a {
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   footer {
-    font-size: 1.0625rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: 400;
   }
 }
@@ -158,14 +151,14 @@ a {
   align-items: center;
   color: #ffffff;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .nav {
     flex-direction: row;
     height: 7rem;
     justify-content: flex-start;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .nav {
     padding-left: 9rem;
   }
@@ -174,7 +167,7 @@ a {
   padding: 1rem 0 0.5rem 0;
   width: 10rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .nav__logo {
     padding-left: 2.25rem;
     padding-right: 4.5rem;
@@ -186,7 +179,7 @@ a {
   justify-content: space-around;
   width: 100%;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .nav__items {
     width: auto;
     height: 100%;
@@ -211,7 +204,7 @@ a {
   border-bottom: 0.125rem solid #ffffff;
   font-weight: 600;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .nav__link {
     width: 100%;
     margin-right: 3rem;
@@ -227,12 +220,12 @@ a {
   position: relative;
   overflow: hidden;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .hero {
     height: 31.9rem;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .hero {
     height: 80vh;
   }
@@ -248,12 +241,12 @@ a {
   align-items: center;
   padding-left: 1.25rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .hero__title {
     padding-left: 2.25rem;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .hero__title {
     padding-left: 12rem;
   }
@@ -262,9 +255,14 @@ a {
 .header {
   margin-bottom: 1.5rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .header {
     margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    margin-bottom: 5rem;
   }
 }
 
@@ -273,25 +271,25 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro {
-    padding: 0 2.25rem;
+    padding: 0 3rem;
     position: relative;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .intro {
     padding: 0 11rem;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .intro__body {
     max-width: 96%;
     margin-left: auto;
@@ -303,14 +301,13 @@ a {
   padding-top: 1.25rem;
   aspect-ratio: 17/9;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__images {
     width: 87%;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .intro__images {
-    height: 80%;
     padding-top: 3rem;
   }
 }
@@ -322,20 +319,20 @@ a {
   font-weight: 600;
   padding-bottom: 1.5rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__slogan--citation {
     padding-top: 2.25rem;
     padding-bottom: 3rem;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__slogan {
     padding-top: 2.25rem;
     padding-left: 5%;
     padding-right: 6%;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__content {
     padding-left: 5%;
     padding-right: 5%;
@@ -348,17 +345,17 @@ a {
   padding-bottom: 1.25rem;
   font-weight: 400;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__content--reading:first-child {
     margin-right: 2rem;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__content--reading {
     padding-bottom: 3rem;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .intro__content--card {
     display: flex;
     flex-direction: row;
@@ -370,12 +367,12 @@ a {
   padding: 1.25rem 1.25rem;
   background-color: #fafafa;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .gallery {
-    padding: 2.25rem 2.25rem;
+    padding: 2.25rem 3rem;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .gallery {
     padding: 3rem 11rem;
   }
@@ -384,7 +381,7 @@ a {
   width: 100%;
   padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .gallery__pic {
     width: 31%;
     padding-bottom: 2.25rem;
@@ -393,14 +390,14 @@ a {
 .gallery__title {
   padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .gallery__title {
     padding-top: 2.25rem;
     padding-bottom: 3rem;
     font-weight: 600;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .gallery__list {
     display: flex;
     flex-direction: row;
@@ -414,28 +411,18 @@ a {
   position: relative;
   width: 100%;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .footer {
-    height: 120%;
-    font-size: 1.0625rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: 400;
-  }
-}
-.footer__blank {
-  height: 2rem;
-  display: none;
-}
-@media screen and (min-width: 48rem) {
-  .footer__blank {
-    display: block;
   }
 }
 .footer__logo--mobile {
   padding-bottom: 1.25rem;
   padding-top: 3.75rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .footer__logo--mobile {
     display: none;
   }
@@ -443,7 +430,7 @@ a {
 .footer__logo--tablet {
   display: none;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .footer__logo--tablet {
     display: block;
     position: absolute;
@@ -451,7 +438,7 @@ a {
     right: 2.25rem;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .footer__logo--tablet {
     right: 9rem;
   }
@@ -462,19 +449,20 @@ a {
   color: #ffffff;
   padding: 1.5rem 1.25rem 1.25rem 1.25rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    padding-top: 3rem;
+    padding-top: 5rem;
+    height: 30rem;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .social {
     padding: 3rem 9rem;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__media {
     display: flex;
     flex-direction: row;
@@ -490,7 +478,7 @@ a {
   justify-content: flex-start;
   align-items: center;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__media--list {
     padding-left: 2rem;
   }
@@ -498,12 +486,12 @@ a {
 .social__media--link {
   margin-right: 2rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__media--title {
     font-weight: 600;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__media--pic {
     width: 2.5rem;
     max-height: 2rem;
@@ -518,7 +506,7 @@ a {
 .social__contact--email {
   color: #ffffff;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__contact {
     display: flex;
     flex-direction: row;
@@ -526,25 +514,21 @@ a {
     padding: 3rem 0;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__contact--person {
     padding: 0 0.2rem;
     padding-right: 5rem;
   }
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .social__contact--person {
     padding-right: 3.55rem;
   }
 }
-@media screen and (min-width: 48rem) {
-  .social__contact--name {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 600;
-  }
+.social__contact--name {
+  font-weight: 600;
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 1280px) {
   .social__contact--name {
     font-size: 1.125rem;
   }
@@ -552,99 +536,185 @@ a {
 .social__contact__copyright {
   padding-top: 20%;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .social__contact__copyright {
+    padding-top: 3rem;
     height: 5rem;
   }
 }
 
 .fans {
-  width: 90%;
-  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .fans {
+    padding: 3rem 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .fans {
+    padding: 6rem 11rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fans__title {
+    padding-bottom: 2.25rem;
+  }
 }
 .fans__container {
-  height: 30%;
+  height: 26rem;
   width: 100%;
   border-bottom: 0.1875rem solid #e1e1e1;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .fans__container {
+    height: 32rem;
+    width: 90%;
+    border-width: 0.125rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .fans__container {
+    width: 60%;
+    border-width: 0.1875rem;
+  }
+}
 .fans__container--section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 80%;
-  height: 25rem;
+  width: 86%;
+  height: 100%;
 }
 .fans__container--label {
   color: #afafaf;
   font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: -1rem;
 }
 .fans__container--name {
   display: block;
+  min-height: 3.2rem;
+  width: 99%;
   background-color: #fafafa;
   color: #323232;
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
 }
 .fans__container--name:focus {
   border: 0.0625rem solid #323232;
   outline: none;
 }
+@media screen and (min-width: 768px) {
+  .fans__container--name {
+    min-height: 4.25rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+  }
+}
 .fans__container--comment {
   background-color: #fafafa;
   color: #323232;
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
-  width: 60%;
-  height: 50%;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  height: 35%;
+  width: 99%;
+  max-height: 10rem;
 }
 .fans__container--comment:focus {
   border: 0.0625rem solid #323232;
   outline: none;
 }
+@media screen and (min-width: 768px) {
+  .fans__container--comment {
+    height: 25%;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+  }
+}
 .fans__container--error {
   border: 0.0625rem solid #d22d2d;
-}
-.fans__container--name {
-  min-height: 2.25rem;
-  width: 100%;
-}
-.fans__container--comment {
-  width: 100%;
-  max-height: 10rem;
 }
 .fans__container--avatar {
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   background-image: url(../assets/images/Mohan-muruge.jpg);
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .fans__container--avatar {
+    width: 4.75rem;
+    height: 4.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fans__container--avatar {
+    margin-top: 4.6rem;
+  }
+}
 .fans__container--submit {
   color: #ffffff;
-  height: 4.375rem;
+  height: 4rem;
   background-color: #323232;
   border-radius: 0.25rem;
   border: none;
   padding: 0;
-  width: 102%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .fans__container--submit {
+    width: 15rem;
+    align-self: self-end;
+  }
 }
 .fans__saved {
-  margin-top: 2rem;
-}
-.fans__saved--section {
   max-height: 50rem;
   overflow-y: scroll;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .fans__saved {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .fans__saved {
+    width: 60%;
+  }
+}
+.fans__saved--section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1875rem solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .fans__saved--section {
+    border-width: 0.125rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .fans__saved--section {
+    border-width: 0.1875rem;
+  }
 }
 .fans__saved--content {
-  border-bottom: 0.1875rem solid #e1e1e1;
+  width: 86%;
 }
 .fans__saved--avatar {
   float: left;
@@ -654,10 +724,15 @@ a {
   height: 3.125rem;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .fans__saved--avatar {
+    width: 4.75rem;
+    height: 4.75rem;
+  }
+}
 .fans__saved--info {
   display: flex;
   justify-content: space-between;
-  margin-left: 5rem;
   padding-bottom: 1rem;
 }
 .fans__saved--name {
@@ -669,7 +744,6 @@ a {
   max-width: 60%;
 }
 .fans__saved--comment {
-  margin-left: 5rem;
   padding-bottom: 2rem;
   word-wrap: break-word;
 }

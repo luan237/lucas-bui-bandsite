@@ -76,17 +76,10 @@ body {
   font-weight: 400;
   overflow-x: hidden;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   body {
-    font-size: 1.15rem;
-    line-height: 1.75rem;
-    font-weight: 400;
-  }
-}
-@media screen and (min-width: 80rem) {
-  body {
-    font-size: 1.15rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: 400;
   }
 }
@@ -100,7 +93,7 @@ a {
   line-height: 3rem;
   font-weight: 600;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .page-header, .section-header {
     font-size: 4.8rem;
     line-height: 4.25rem;
@@ -108,9 +101,9 @@ a {
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .section-header {
-    font-size: 2.95rem;
+    font-size: 3.35rem;
     line-height: 2.75rem;
     font-weight: 600;
   }
@@ -121,7 +114,7 @@ a {
   line-height: 2.125rem;
   font-weight: 600;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .sub-header {
     font-size: 1.7rem;
     line-height: 2.25rem;
@@ -134,7 +127,7 @@ a {
   line-height: 1.25rem;
   font-weight: 700;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .label {
     font-size: 0.75rem;
     line-height: 1.25rem;
@@ -142,10 +135,10 @@ a {
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   footer {
-    font-size: 1.0625rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
     font-weight: 400;
   }
 }

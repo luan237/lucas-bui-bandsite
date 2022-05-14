@@ -3,7 +3,7 @@ comments = [
     name: "Connor Walton",
     time: "02 / 17 / 2021",
     comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. const us appreciate this for what it is and what it contains.",
+      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
   {
     name: "Emilie Beach",
@@ -45,7 +45,7 @@ const fanName = document.createElement("input");
 fanName.classList.add("fans__container--name");
 fanName.setAttribute("type", "text");
 fanName.setAttribute("name", "name");
-fanName.setAttribute("placeholder", "Enter your name");
+fanName.setAttribute("placeholder", "  Enter your name");
 fanSection.appendChild(fanName);
 // input comment
 const fanCommentLabel = document.createElement("label");
@@ -56,8 +56,7 @@ fanCommentLabel.innerText = "COMMENT";
 fanComment.classList.add("fans__container--comment");
 fanComment.setAttribute("type", "text");
 fanComment.setAttribute("name", "comment");
-fanComment.setAttribute("placeholder", "Add a new comment");
-fanComment.setAttribute("rows", "1");
+fanComment.setAttribute("placeholder", " Add a new comment");
 fanSection.appendChild(fanComment);
 // submit button
 const fanSubmit = document.createElement("button");
@@ -69,27 +68,27 @@ fanSection.appendChild(fanSubmit);
 
 // comment section
 
-const savedSection = document.createElement("div");
-savedSection.classList.add("fans__saved--section");
-fans.appendChild(savedSection);
+const savedContainer = document.createElement("div");
+savedContainer.classList.add("fans__saved");
+fans.appendChild(savedContainer);
 
 // Show default comment function
 function displayComments() {
   for (let i = 0; i < comments.length; i++) {
     // display comments container
-    const savedContainer = document.createElement("div");
-    savedContainer.classList.add("fans__saved");
-    savedSection.appendChild(savedContainer);
+    const savedSection = document.createElement("div");
+    savedSection.classList.add("fans__saved--section");
+    savedContainer.appendChild(savedSection);
 
     // avatar
     const savedAvatar = document.createElement("img");
     savedAvatar.classList.add("fans__saved--avatar");
-    savedContainer.appendChild(savedAvatar);
+    savedSection.appendChild(savedAvatar);
 
     // right side section of comments
     const savedRightSide = document.createElement("div");
     savedRightSide.classList.add("fans__saved--content");
-    savedContainer.appendChild(savedRightSide);
+    savedSection.appendChild(savedRightSide);
 
     // name and date container
     const savedNAndD = document.createElement("div");
@@ -122,17 +121,22 @@ const errorName = document.querySelector(".fans__container--name");
 const errorComment = document.querySelector(".fans__container--comment");
 // Show default comment
 displayComments();
+
+// submit event
 commentContainer.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // error state
   if (e.target.name.value.length < 3 || e.target.comment.value.length < 1) {
     errorName.classList.add("fans__container--error");
     errorComment.classList.add("fans__container--error");
   } else {
-    savedSection.innerHTML = "";
+    // display new comment function
+    savedContainer.innerHTML = "";
     console.log(e);
     let newDate = new Date();
     let newDay = ("0" + newDate.getDate()).slice(-2);
-    let newMonth = ("0" + newDate.getMonth()).slice(-2);
+    let newMonth = ("0" + (newDate.getMonth() + 1)).slice(-2);
     let newYear = newDate.getFullYear();
     let newComment = {
       name: e.target.name.value,
@@ -140,8 +144,11 @@ commentContainer.addEventListener("submit", (e) => {
       time: newMonth + " / " + newDay + " / " + newYear,
     };
     comments.unshift(newComment);
+    //reset name and comment input, then display comment
     e.target.reset();
     displayComments();
+
+    // remove error if available
     errorName.classList.remove("fans__container--error");
     errorComment.classList.remove("fans__container--error");
   }

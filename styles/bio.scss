@@ -102,6 +102,9 @@
     @include tablet{
         margin-bottom: $desktop-long-padding;
     }
+    @include desktop{
+        margin-bottom: 5rem;
+    }
 }
 
 // main content
@@ -111,7 +114,7 @@
     display: flex;
     flex-direction: column;
     @include tablet{
-        padding: 0 $desktop-short-padding;
+        padding: 0 $desktop-long-padding;
         position: relative;;
     }
     @include desktop{
@@ -137,7 +140,6 @@
             width: 87%;
             }
         @include desktop{
-            height: 80%;
             padding-top: $desktop-long-padding;
         }
     }
@@ -193,7 +195,7 @@
     padding: $mobile-short-padding $mobile-short-padding;
     background-color: $color-alabaster;
     @include tablet{
-        padding: $desktop-short-padding $desktop-short-padding;
+        padding: $desktop-short-padding $desktop-long-padding;
     }
     @include desktop{
         padding: $desktop-long-padding 11rem;
@@ -228,15 +230,7 @@
     position: relative;
     width: 100%;
     @include tablet{
-        height: 120%;
         @include desktop-footer-copy;
-    }
-    &__blank{
-    height: 2rem;
-    display: none;
-    @include tablet{
-        display: block;
-    }
     }
     &__logo{
         &--mobile{
@@ -267,7 +261,8 @@
     @include tablet{
         padding-left: $desktop-short-padding;
         padding-right: $desktop-short-padding;
-        padding-top: $desktop-long-padding;
+        padding-top: 5rem;
+        height: 30rem;
     }
     @include desktop{
         padding: $desktop-long-padding 3*$desktop-long-padding;
@@ -333,11 +328,7 @@
             }
     }
         &--name{
-            @include tablet{
-            font-size: 1rem;
-            line-height: 1.5rem;
             font-weight: 600;
-        }
         @include desktop{
             font-size: 1.125rem;
         }
@@ -345,98 +336,146 @@
     &__copyright{
         padding-top: 20%;
         @include tablet{
+            padding-top: 3rem;
             height: 5rem;
         }
     }
 }
 }
 
+
+// comment section
 .fans{
-    width: 90%;
-    // height: 50rem;
-    margin: 0 auto;
+    padding: $mobile-long-padding $mobile-short-padding;
     display: flex;
     flex-direction: column;
-    padding-top: $mobile-long-padding;
-    padding-bottom: $mobile-long-padding;
+    @include tablet{
+        padding: $desktop-long-padding $desktop-long-padding;
+    }
+    @include desktop{
+        padding: 6rem 11rem;
+    }
+    &__title{
+        @include tablet{
+            padding-bottom: $desktop-short-padding;
+        }
+    }
     &__container{
-        height: 30%;
+        height: 26rem;
         width: 100%;
         border-bottom: 0.1875rem solid $color-mercury;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
+        @include tablet{
+            height: 32rem;
+            width: 90%;
+            border-width: 0.125rem;
+            }
+        @include desktop{
+            width: 60%;
+            border-width: 0.1875rem;
+        }
+
         &--section{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            width: 80%;
-            height: 25rem;
+            width: 86%;
+            height: 100%;
         }
         &--label{
             color: $color-silver;
             font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: -1rem
         }
         &--name{
             display: block;
+            min-height: 3.2rem;
+            width: 99%;
             @include comment;
+            @include mobile-body-footer-copy;
+            @include tablet{
+                min-height: 4.25rem;
+                @include desktop-body-copy;
+            }
         }
         &--comment{
             @include comment;
-            width: 60%;
-            height: 50%;
+            @include mobile-body-footer-copy;
+            height: 35%;
+            width: 99%;
+            max-height: 10rem;
+            @include tablet{
+                height: 25%;
+                @include desktop-body-copy;
+            }
         }
         &--error{
             border: 0.0625rem solid #d22d2d;
         }
-        &--name{
-            min-height: 2.25rem;
-            width: 100%;
-        }
-        &--comment{
-            width: 100%;
-            max-height: 10rem;
-            
-        }
         &--avatar{
-            width  : 3.125rem;
-            height: 3.125rem;
-            border-radius: 50%;
-            margin-top: 2.5rem;
+            @include avatar;
+            margin-top: 4rem;
             background-image: url(../assets/images/Mohan-muruge.jpg);
             background-size: cover;
+            @include tablet{
+                margin-top: 4.6rem
+            }
         }
         &--submit{
             color: $color-white;
-            height: 4.375rem;
+            height: 4rem;
             background-color: $color-black;
             border-radius: 0.25rem;
             border: none;
             padding: 0;
-            width: 102%;
+            width: 100%;
+            @include tablet{
+                width: 15rem;
+                align-self: self-end;
+            }
         }
     }
+
+    // saved and new comments
     &__saved{
-        margin-top: 2rem;
+        max-height: 50rem;
+        overflow-y: scroll;
+        margin: 0 auto;
+        @include tablet{
+            padding: 0 5%;
+        }
+        @include desktop{
+            width: 60%;
+        }
         &--section{
-            max-height: 50rem;
-            overflow-y: scroll;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 0.1875rem solid $color-mercury;
+            @include tablet{
+                border-width: 0.125rem;
+            }
+            @include desktop{
+                border-width: 0.1875rem;
+            }
         }
         &--content{
-        border-bottom: 0.1875rem solid $color-mercury;
+            width: 86%;
         }
         &--avatar{
             float: left;
             background-color: $color-mercury;
             border: 0.0625rem solid $color-mercury;
-            width: 3.125rem;
-            height: 3.125rem;
-            border-radius: 50%;
+            @include avatar;
+
         }
         &--info{
             display: flex;
             justify-content: space-between;
-            margin-left: 5rem;
+            // margin-left: 5rem;
             padding-bottom: 1rem;
         }
         &--name{
@@ -448,7 +487,7 @@
             max-width: 60%;
         }
         &--comment{
-            margin-left: 5rem;
+            // margin-left: 5rem;
             padding-bottom: 2rem;
             word-wrap: break-word;
         }

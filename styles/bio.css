@@ -161,7 +161,7 @@ a {
 @media screen and (min-width: 48rem) {
   .nav {
     flex-direction: row;
-    height: 7rem;
+    height: 112px;
     justify-content: flex-start;
   }
 }
@@ -171,8 +171,8 @@ a {
   }
 }
 .nav__logo {
-  padding: 1rem 0 0.5rem 0;
-  width: 10rem;
+  padding: 16px 0 8px 0;
+  width: 160px;
 }
 @media screen and (min-width: 48rem) {
   .nav__logo {
@@ -195,7 +195,7 @@ a {
 }
 .nav__link {
   color: #e1e1e1;
-  padding-bottom: 1.35rem;
+  padding-bottom: 21.6px;
   width: 50%;
   text-align: center;
 }
@@ -208,7 +208,7 @@ a {
   font-weight: 600;
 }
 .nav__link--highlight {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 0.125rem solid #ffffff;
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
@@ -223,13 +223,13 @@ a {
   background-image: url(../assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 20rem;
+  height: 320px;
   position: relative;
   overflow: hidden;
 }
 @media screen and (min-width: 48rem) {
   .hero {
-    height: 31.9rem;
+    height: 510.4px;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -255,7 +255,7 @@ a {
 }
 @media screen and (min-width: 80rem) {
   .hero__title {
-    padding-left: 12rem;
+    padding-left: 192px;
   }
 }
 
@@ -281,7 +281,7 @@ a {
 }
 @media screen and (min-width: 80rem) {
   .intro {
-    padding: 0 11rem;
+    padding: 0 176px;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -350,7 +350,7 @@ a {
 }
 @media screen and (min-width: 48rem) {
   .intro__content--reading:first-child {
-    margin-right: 2rem;
+    margin-right: 32px;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -377,7 +377,7 @@ a {
 }
 @media screen and (min-width: 80rem) {
   .gallery {
-    padding: 3rem 11rem;
+    padding: 3rem 176px;
   }
 }
 .gallery__pic {
@@ -423,7 +423,7 @@ a {
   }
 }
 .footer__blank {
-  height: 2rem;
+  height: 32px;
   display: none;
 }
 @media screen and (min-width: 48rem) {
@@ -447,7 +447,7 @@ a {
   .footer__logo--tablet {
     display: block;
     position: absolute;
-    width: 10rem;
+    width: 160px;
     right: 2.25rem;
   }
 }
@@ -492,11 +492,11 @@ a {
 }
 @media screen and (min-width: 48rem) {
   .social__media--list {
-    padding-left: 2rem;
+    padding-left: 32px;
   }
 }
 .social__media--link {
-  margin-right: 2rem;
+  margin-right: 32px;
 }
 @media screen and (min-width: 48rem) {
   .social__media--title {
@@ -505,8 +505,8 @@ a {
 }
 @media screen and (min-width: 48rem) {
   .social__media--pic {
-    width: 40px;
-    max-height: 32px;
+    width: 2.5rem;
+    max-height: 2rem;
   }
 }
 .social__contact > * {
@@ -528,25 +528,25 @@ a {
 }
 @media screen and (min-width: 48rem) {
   .social__contact--person {
-    padding: 0 0.2rem;
-    padding-right: 5rem;
+    padding: 0 3.2px;
+    padding-right: 80px;
   }
 }
 @media screen and (min-width: 80rem) {
   .social__contact--person {
-    padding-right: 3.55rem;
+    padding-right: 56.8px;
   }
 }
 @media screen and (min-width: 48rem) {
   .social__contact--name {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 600;
   }
 }
 @media screen and (min-width: 80rem) {
   .social__contact--name {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .social__contact__copyright {
@@ -554,7 +554,7 @@ a {
 }
 @media screen and (min-width: 48rem) {
   .social__contact__copyright {
-    height: 5rem;
+    height: 80px;
   }
 }
 
@@ -563,11 +563,13 @@ a {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .fans__container {
   height: 30%;
   width: 100%;
-  border: 3px solid black;
+  border-bottom: 0.1875rem solid #e1e1e1;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -575,38 +577,103 @@ a {
 .fans__container--section {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 400px;
+}
+.fans__container--label {
+  color: #afafaf;
+  font-size: 16px;
 }
 .fans__container--name {
   display: block;
+  background-color: #fafafa;
+  color: #323232;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+.fans__container--name:focus {
+  border: 1px solid #323232;
+  outline: none;
 }
 .fans__container--comment {
+  background-color: #fafafa;
+  color: #323232;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
   width: 60%;
   height: 50%;
 }
+.fans__container--comment:focus {
+  border: 1px solid #323232;
+  outline: none;
+}
+.fans__container--error {
+  border: 0.0625rem solid #d22d2d;
+}
+.fans__container--name {
+  min-height: 2.25rem;
+  width: 100%;
+}
+.fans__container--comment {
+  width: 100%;
+  max-height: 160px;
+}
 .fans__container--avatar {
-  width: 60px;
-  height: 60px;
-  aspect-ratio: 1/1;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
+  margin-top: 40px;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+}
+.fans__container--submit {
+  color: #ffffff;
+  height: 4.375rem;
+  background-color: #323232;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0;
+  width: 102%;
 }
 .fans__saved {
-  margin-top: 2rem;
-  overflow: scroll;
+  margin-top: 32px;
+}
+.fans__saved--section {
+  max-height: 50rem;
+  overflow-y: scroll;
 }
 .fans__saved--content {
-  border-top: 1px solid #afafaf;
-  border-bottom: 1px solid #afafaf;
+  border-bottom: 0.1875rem solid #e1e1e1;
 }
 .fans__saved--avatar {
   float: left;
+  background-color: #e1e1e1;
+  border: 0.0625rem solid #e1e1e1;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
 }
 .fans__saved--info {
   display: flex;
   justify-content: space-between;
-  margin-left: 5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-left: 80px;
+  padding-bottom: 16px;
+}
+.fans__saved--name {
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 15rem;
 }
 .fans__saved--comment {
-  margin-left: 5rem;
+  margin-left: 80px;
+  padding-bottom: 32px;
+  word-wrap: break-word;
+}
+.fans__saved--date {
+  color: #afafaf;
+  min-width: 7.175rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -13,7 +13,7 @@
     color: $color-white;
     @include tablet{
         flex-direction: row;
-        height: 7rem;
+        height: 112px;
         justify-content: flex-start
     }
     @include desktop{
@@ -21,8 +21,8 @@
     }
     &__logo{
         // @include logo;
-        padding: 1rem 0 0.5rem 0;
-        width: 10rem;
+        padding: 16px 0 8px 0;
+        width: 160px;
         @include tablet{
             padding-left: $desktop-short-padding;
             padding-right: 2*$desktop-short-padding;
@@ -42,7 +42,7 @@
     }
     &__link{
         color: $color-mercury;
-        padding-bottom: 1.35rem;
+        padding-bottom: 21.6px;
         width: 50%;
         text-align: center;
         &:active{
@@ -54,7 +54,7 @@
             font-weight: $demi;
         }
         &--highlight{
-            border-bottom: 2px solid $color-white;
+            border-bottom: 0.125rem solid $color-white;
             font-weight: $demi;
         }
         @include tablet{
@@ -69,11 +69,11 @@
     background-image: url(../assets/images/hero-bio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 20rem;
+    height: 320px;
     position: relative;
     overflow: hidden;
     @include tablet{
-        height: 31.9rem;
+        height: 510.4px;
     }
     @include desktop{
      height: 80vh;
@@ -92,7 +92,7 @@
             padding-left: $desktop-short-padding;
         }
         @include desktop{
-            padding-left: 12rem;
+            padding-left: 192px;
         }
     }
 }
@@ -115,7 +115,7 @@
         position: relative;;
     }
     @include desktop{
-        padding: 0 11rem;
+        padding: 0 176px;
     }
     &__body{
         @include tablet{
@@ -173,7 +173,7 @@
             font-weight: 400;
             &:first-child{
                 @include tablet{
-                margin-right: 2rem;
+                margin-right: 32px;
             }
         }
         @include tablet{
@@ -196,7 +196,7 @@
         padding: $desktop-short-padding $desktop-short-padding;
     }
     @include desktop{
-        padding: $desktop-long-padding 11rem;
+        padding: $desktop-long-padding 176px;
     }
     &__pic{
         width: 100%;
@@ -232,7 +232,7 @@
         @include desktop-footer-copy;
     }
     &__blank{
-    height: 2rem;
+    height: 32px;
     display: none;
     @include tablet{
         display: block;
@@ -251,7 +251,7 @@
         @include tablet{
             display: block;
             position: absolute;
-            width: 10rem;
+            width: 160px;
             right: $desktop-short-padding;
             }
         @include desktop{
@@ -289,11 +289,11 @@
             justify-content: flex-start;
             align-items: center;
             @include tablet{
-                padding-left: 2rem;
+                padding-left: 32px;
             }
         }
         &--link{
-            margin-right: 2rem;
+            margin-right: 32px;
         }
         &--title{
             @include tablet{
@@ -302,8 +302,8 @@
         }
         &--pic{
             @include tablet{
-                width: 40px;
-                max-height: 32px;
+                width: 2.5rem;
+                max-height: 2rem;
             }
         }
     }
@@ -325,27 +325,27 @@
         }
         &--person{
             @include tablet{
-            padding: 0 0.2rem;
-            padding-right: 5rem;
+            padding: 0 3.2px;
+            padding-right: 80px;
         }
             @include desktop{
-                padding-right: 3.55rem;
+                padding-right: 56.8px;
             }
     }
         &--name{
             @include tablet{
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 1rem;
+            line-height: 1.5rem;
             font-weight: 600;
         }
         @include desktop{
-            font-size: 18px;
+            font-size: 1.125rem;
         }
         }
     &__copyright{
         padding-top: 20%;
         @include tablet{
-            height: 5rem;
+            height: 80px;
         }
     }
 }
@@ -353,60 +353,108 @@
 
 .fans{
     width: 90%;
-    // height: 50rem;
+    // height: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding-top: $mobile-long-padding;
+    padding-bottom: $mobile-long-padding;
     &__container{
         height: 30%;
         width: 100%;
-        border: 3px solid black;
+        border-bottom: 0.1875rem solid $color-mercury;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
         &--section{
             display: flex;
             flex-direction: column;
-            // & > *{
-            //     display: flex;
-            //     flex-direction: column;
-            // }
+            justify-content: space-evenly;
+            width: 80%;
+            height: 400px;
+        }
+        &--label{
+            color: $color-silver;
+            font-size: 16px;
         }
         &--name{
             display: block;
+            @include comment;
         }
         &--comment{
-            // display: flex;
-            // flex-direction: column;
+            @include comment;
             width: 60%;
             height: 50%;
         }
+        &--error{
+            border: 0.0625rem solid #d22d2d;
+        }
+        &--name{
+            min-height: 2.25rem;
+            width: 100%;
+        }
+        &--comment{
+            width: 100%;
+            max-height: 160px;
+            
+        }
         &--avatar{
-            width  : 60px;
-            height: 60px;
-            aspect-ratio: 1/1;
+            width  : 3.125rem;
+            height: 3.125rem;
             border-radius: 50%;
+            margin-top: 40px;
+            background-image: url(../assets/images/Mohan-muruge.jpg);
+            background-size: cover;
+        }
+        &--submit{
+            color: $color-white;
+            height: 4.375rem;
+            background-color: $color-black;
+            border-radius: 0.25rem;
+            border: none;
+            padding: 0;
+            width: 102%;
         }
     }
     &__saved{
-        margin-top: 2rem;
-        overflow: scroll;
+        margin-top: 32px;
+        &--section{
+            max-height: 50rem;
+            overflow-y: scroll;
+        }
         &--content{
-        border-top: 1px solid $color-silver;
-        border-bottom: 1px solid $color-silver;
+        border-bottom: 0.1875rem solid $color-mercury;
         }
         &--avatar{
             float: left;
+            background-color: $color-mercury;
+            border: 0.0625rem solid $color-mercury;
+            width: 3.125rem;
+            height: 3.125rem;
+            border-radius: 50%;
         }
         &--info{
             display: flex;
             justify-content: space-between;
-            margin-left: 5rem;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+            margin-left: 80px;
+            padding-bottom: 16px;
+        }
+        &--name{
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 15rem;
         }
         &--comment{
-            margin-left: 5rem;
+            margin-left: 80px;
+            padding-bottom: 32px;
+            word-wrap: break-word;
+        }
+        &--date{
+            color: $color-silver;
+            min-width: 7.175rem;
         }
     }
 }

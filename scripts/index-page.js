@@ -27,9 +27,9 @@ commentContainer.classList.add("fans__container");
 fans.appendChild(commentContainer);
 
 // input avatar
-const fanAvatar = document.createElement("img");
+const fanAvatar = document.createElement("div");
 fanAvatar.classList.add("fans__container--avatar");
-fanAvatar.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
+// fanAvatar.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
 commentContainer.appendChild(fanAvatar);
 
 // input comment section
@@ -50,17 +50,20 @@ fanSection.appendChild(fanName);
 // input comment
 const fanCommentLabel = document.createElement("label");
 fanCommentLabel.classList.add("fans__container--label");
-const fanComment = document.createElement("input");
+const fanComment = document.createElement("textarea");
 fanSection.appendChild(fanCommentLabel);
 fanCommentLabel.innerText = "COMMENT";
 fanComment.classList.add("fans__container--comment");
 fanComment.setAttribute("type", "text");
 fanComment.setAttribute("name", "comment");
 fanComment.setAttribute("placeholder", "Add a new comment");
+fanComment.setAttribute("rows", "1");
 fanSection.appendChild(fanComment);
 // submit button
 const fanSubmit = document.createElement("button");
 fanSubmit.classList.add("fans__container--submit");
+fanSubmit.classList.add("sub-header");
+
 fanSubmit.innerText = "COMMENT";
 fanSection.appendChild(fanSubmit);
 
@@ -70,6 +73,7 @@ const savedSection = document.createElement("div");
 savedSection.classList.add("fans__saved--section");
 fans.appendChild(savedSection);
 
+// Show default comment function
 function displayComments() {
   for (let i = 0; i < comments.length; i++) {
     // display comments container
@@ -114,68 +118,31 @@ function displayComments() {
   }
   return displayComments;
 }
-
+const errorName = document.querySelector(".fans__container--name");
+const errorComment = document.querySelector(".fans__container--comment");
+// Show default comment
 displayComments();
-
-// const savedContainer = document.createElement("div");
-// savedContainer.classList.add("fans__saved");
-// fans.appendChild(savedContainer);
-// const savedAvatar = document.createElement("img");
-// savedAvatar.classList.add("fan__saved--avatar");
-// savedContainer.appendChild(savedAvatar);
-// const savedName = document.createElement("p");
-// savedName.classList.add("fan__saved--name");
-// savedContainer.appendChild(savedName);
-// const savedTime = document.createElement("p");
-// savedTime.classList.add("fan__saved--time");
-// savedContainer.appendChild(savedTime);
-// const savedComment = document.createElement("p");
-// savedComment.classList.add("fan__saved--name");
-// savedContainer.appendChild(savedComment);
-
-// savedName.textContent = comments[i].name;
-// savedComment.textContent = comments[i].comment;
-
 commentContainer.addEventListener("submit", (e) => {
   e.preventDefault();
-  savedSection.innerHTML = "";
-  console.log(e);
-  let newDate = new Date();
-  let newDay = ("0" + newDate.getDate()).slice(-2);
-  let newMonth = ("0" + newDate.getMonth()).slice(-2);
-  let newYear = newDate.getFullYear();
-  let newComment = {
-    name: e.target.name.value,
-    comment: e.target.comment.value,
-    time: newMonth + " / " + newDay + " / " + newYear,
-  };
-  console.log(newComment);
-  comments.unshift(newComment);
-  e.target.reset();
-  displayComments();
+  if (e.target.name.value.length < 3 || e.target.comment.value.length < 1) {
+    errorName.classList.add("fans__container--error");
+    errorComment.classList.add("fans__container--error");
+  } else {
+    savedSection.innerHTML = "";
+    console.log(e);
+    let newDate = new Date();
+    let newDay = ("0" + newDate.getDate()).slice(-2);
+    let newMonth = ("0" + newDate.getMonth()).slice(-2);
+    let newYear = newDate.getFullYear();
+    let newComment = {
+      name: e.target.name.value,
+      comment: e.target.comment.value,
+      time: newMonth + " / " + newDay + " / " + newYear,
+    };
+    comments.unshift(newComment);
+    e.target.reset();
+    displayComments();
+    errorName.classList.remove("fans__container--error");
+    errorComment.classList.remove("fans__container--error");
+  }
 });
-// for (const i = 0; i < comments.length; i++) {
-//   const savedContainer = document.createElement("div");
-//   savedContainer.classList.add("fans__saved");
-//   fans.appendChild(savedContainer);
-//   const savedAvatar = document.createElement("img");
-//   savedAvatar.classList.add("fan__saved--avatar");
-//   savedContainer.appendChild(savedAvatar);
-//   const savedName = document.createElement("p");
-//   savedName.classList.add("fan__saved--name");
-//   savedContainer.appendChild(savedName);
-//   const savedTime = document.createElement("p");
-//   savedTime.classList.add("fan__saved--time");
-//   savedContainer.appendChild(savedTime);
-//   const savedComment = document.createElement("p");
-//   savedComment.classList.add("fan__saved--name");
-//   savedContainer.appendChild(savedComment);
-
-//   savedName.textContent = comments[i].name;
-//   savedComment.textContent = comments[i].comment;
-//   savedTime.textContent = new Date();
-// }
-// });
-
-let newDate = new Date();
-console.log(newDate.toLocaleDateString("en-US"));

@@ -560,7 +560,6 @@ a {
 
 .fans {
   width: 90%;
-  height: 50rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -570,13 +569,10 @@ a {
   width: 100%;
   border: 3px solid black;
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
 }
 .fans__container--section {
-  display: flex;
-  flex-direction: column;
-}
-.fans__container--section > * {
   display: flex;
   flex-direction: column;
 }

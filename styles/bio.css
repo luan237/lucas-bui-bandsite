@@ -89,7 +89,7 @@ a {
 }
 
 .page-header, .section-header {
-  font-size: 2.125rem;
+  font-size: 2.325rem;
   line-height: 3rem;
   font-weight: 600;
 }
@@ -110,8 +110,8 @@ a {
 }
 
 .sub-header {
-  font-size: 1.25rem;
-  line-height: 2.125rem;
+  font-size: 1.35rem;
+  line-height: 2.25rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -169,7 +169,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .nav__logo {
-    padding-left: 2.25rem;
+    padding-left: 4.5rem;
     padding-right: 4.5rem;
   }
 }
@@ -243,7 +243,10 @@ a {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    padding-left: 2.25rem;
+    padding-left: 4.5rem;
+    font-size: 4.8rem;
+    line-height: 4.25rem;
+    font-weight: 600;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -273,7 +276,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .intro {
-    padding: 0 3rem;
+    padding: 0 4.5rem;
     position: relative;
   }
 }
@@ -416,6 +419,12 @@ a {
     font-size: 1.25rem;
     line-height: 2.1rem;
     font-weight: 400;
+    height: 33rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    height: 25rem;
   }
 }
 .footer__logo--mobile {
@@ -448,13 +457,13 @@ a {
   background-color: #323232;
   color: #ffffff;
   padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .social {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
     padding-top: 5rem;
-    height: 30rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -517,7 +526,7 @@ a {
 @media screen and (min-width: 768px) {
   .social__contact--person {
     padding: 0 0.2rem;
-    padding-right: 5rem;
+    padding-right: 4%;
   }
 }
 @media screen and (min-width: 1280px) {

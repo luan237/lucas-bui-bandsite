@@ -24,7 +24,7 @@
         padding: 1rem 0 0.5rem 0;
         width: 10rem;
         @include tablet{
-            padding-left: $desktop-short-padding;
+            padding-left: 2*$desktop-short-padding;
             padding-right: 2*$desktop-short-padding;
         }
     }
@@ -89,7 +89,8 @@
         align-items: center;
         padding-left: $mobile-short-padding;
         @include tablet{
-            padding-left: $desktop-short-padding;
+            padding-left: 2*$desktop-short-padding;
+            @include desktop-page-header;
         }
         @include desktop{
             padding-left: 12rem;
@@ -114,7 +115,7 @@
     display: flex;
     flex-direction: column;
     @include tablet{
-        padding: 0 $desktop-long-padding;
+        padding: 0 2*$desktop-short-padding;
         position: relative;;
     }
     @include desktop{
@@ -231,6 +232,10 @@
     width: 100%;
     @include tablet{
         @include desktop-footer-copy;
+        height: 33rem;
+    }
+    @include desktop{
+        height: 25rem;
     }
     &__logo{
         &--mobile{
@@ -258,11 +263,11 @@
     background-color: $color-black;
     color: $color-white;
     padding: $mobile-long-padding $mobile-short-padding $mobile-short-padding $mobile-short-padding;
+    height: 100%;
     @include tablet{
-        padding-left: $desktop-short-padding;
-        padding-right: $desktop-short-padding;
+        padding-left: 2*$desktop-short-padding;
+        padding-right: 2*$desktop-short-padding;
         padding-top: 5rem;
-        height: 30rem;
     }
     @include desktop{
         padding: $desktop-long-padding 3*$desktop-long-padding;
@@ -321,7 +326,7 @@
         &--person{
             @include tablet{
             padding: 0 0.2rem;
-            padding-right: 5rem;
+            padding-right: 4%;
         }
             @include desktop{
                 padding-right: 3.55rem;
@@ -344,7 +349,7 @@
 }
 
 
-// comment section
+//                       comment section                           
 .fans{
     padding: $mobile-long-padding $mobile-short-padding;
     display: flex;

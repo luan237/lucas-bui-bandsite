@@ -1,5 +1,5 @@
 // List of shows
-let showsList = [
+const showsList = [
   {
     date: "Mon Sept 06 2021",
     venue: "Ronald Lane",
@@ -31,32 +31,55 @@ let showsList = [
     location: "San Francisco, CA",
   },
 ];
+
+const tableHead = ["DATE", "VENUE", "LOCATION"];
 // grab all shows display
-let mainEl = document.querySelector(".info");
+const mainEl = document.querySelector(".info");
+// mobile container
+const infoMobile = document.createElement("div");
+infoMobile.classList.add("info__wrap");
+mainEl.appendChild(infoMobile);
+
+// create table
+
+const infoTable = document.createElement("table");
+infoTable.classList.add("info__table");
+mainEl.appendChild(infoTable);
+const infoTableRow = document.createElement("tr");
+infoTableRow.classList.add("info__table--row");
+infoTable.appendChild(infoTableRow);
+
+for (let j = 0; j < tableHead.length; j++) {
+  const infoTableHead = document.createElement("th");
+  infoTableHead.classList.add("info__table--head");
+  infoTableHead.innerText = tableHead[j];
+  infoTableRow.appendChild(infoTableHead);
+}
+
 // loop to create each shows
 for (let i = 0; i < showsList.length; i++) {
   // outer container
-  let infoContainer = document.createElement("div");
+  const infoContainer = document.createElement("div");
   infoContainer.classList.add("info__container");
-  mainEl.appendChild(infoContainer);
+  infoMobile.appendChild(infoContainer);
   // date
-  let infoDate = document.createElement("p");
+  const infoDate = document.createElement("p");
   infoDate.classList.add("info__tag");
-  let infoDateContent = document.createElement("p");
+  const infoDateContent = document.createElement("p");
   infoDateContent.classList.add("info__content");
   infoDateContent.classList.add("info__content--bold");
   // venue
-  let infoVenue = document.createElement("p");
+  const infoVenue = document.createElement("p");
   infoVenue.classList.add("info__tag");
-  let infoVenueContent = document.createElement("p");
+  const infoVenueContent = document.createElement("p");
   infoVenueContent.classList.add("info__content");
   // location
-  let infoLocation = document.createElement("p");
+  const infoLocation = document.createElement("p");
   infoLocation.classList.add("info__tag");
-  let infoLocationContent = document.createElement("p");
+  const infoLocationContent = document.createElement("p");
   infoLocationContent.classList.add("info__content");
   // buy tickets button
-  let infoTicket = document.createElement("button");
+  const infoTicket = document.createElement("button");
   infoTicket.classList.add("info__ticket");
   infoTicket.classList.add("sub-header");
 
@@ -76,11 +99,45 @@ for (let i = 0; i < showsList.length; i++) {
   infoLocation.innerText = "LOCATION";
   infoLocationContent.innerText = showsList[i].location;
   infoTicket.innerText = "BUY TICKETS";
+
+  // // // // // // // // // // // // // // // // // // // // // // // // //
+  //                TABLE PART              //
+  // table header
+  const infoTableRow = document.createElement("tr");
+  infoTableRow.classList.add("info__table--row");
+  infoTableRow.classList.add("info__container");
+
+  // table content
+  const infoTableDate = document.createElement("td");
+  infoTableDate.classList.add("info__table--content");
+  infoTableDate.classList.add("info__content--bold");
+  const infoTableVenue = document.createElement("td");
+  infoTableVenue.classList.add("info__table--content");
+  const infoTableLocation = document.createElement("td");
+  infoTableLocation.classList.add("info__table--content");
+  const infoTicketTable = document.createElement("button");
+  infoTicketTable.classList.add("info__ticket");
+  infoTicketTable.classList.add("sub-header");
+  // const infoTableContent = document.createElement("td")
+  // infoTableContent.classList.add("info__table--content");
+
+  // // append child
+  infoTable.appendChild(infoTableRow);
+  infoTableRow.appendChild(infoTableDate);
+  infoTableRow.appendChild(infoTableVenue);
+  infoTableRow.appendChild(infoTableLocation);
+  infoTableRow.appendChild(infoTicketTable);
+  // infoTableRow.appendChild(infoTableContent);
+
+  infoTableDate.innerText = showsList[i].date;
+  infoTableVenue.innerText = showsList[i].venue;
+  infoTableLocation.innerText = showsList[i].location;
+  infoTicketTable.innerText = "BUY TICKETS";
 }
 // toggle selected state for each ticket
-let infoContainerSelected = document.querySelectorAll(".info__container");
+const infoContainerSelected = document.querySelectorAll(".info__container");
 infoContainerSelected.forEach((container) => {
-  container.addEventListener("click", (e) => {
+  container.addEventListener("click", () => {
     if (container.classList.contains("info__container--selected")) {
       container.classList.remove("info__container--selected");
     } else {

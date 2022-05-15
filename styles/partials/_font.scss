@@ -63,13 +63,13 @@ $regular-size: 400;
 }
 
 @mixin mobile-page-section-header {
-    font-size: 2.125rem;
+    font-size: 2.325rem;
     line-height: 3rem;
     font-weight: $demi;
 }
 @mixin mobile-sub-header {
-    font-size: 1.25rem;
-    line-height: 2.125rem;
+    font-size: 1.35rem;
+    line-height: 2.25rem;
     font-weight: $demi;
 }
 @mixin mobile-body-footer-copy {

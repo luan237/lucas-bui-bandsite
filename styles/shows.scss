@@ -9,6 +9,9 @@
     background-image: url(../assets/images/hero-shows.jpg);
     height: 27rem;
     z-index: 0;
+    @include tablet{
+        height: 50rem;
+    }
     &--background{
         background-color: rgba(32,32,32,0.5);
         height: 100%;
@@ -19,54 +22,147 @@
         flex-direction: column;
         justify-content: space-evenly;
         & > *{
-            margin-left: $mobile-short-padding;
+            padding-left: $mobile-short-padding;
+            @include tablet{
+                padding-left: 2*$desktop-short-padding;
+            }
+            @include desktop{
+                padding-left: 11.2%;
+            }
         }
     }
     &--title{
         z-index: 2;
-        position: relative;
+        @include tablet{
+        font-size: 2.5rem;
+        }
+        &:nth-child(2){
+        @include tablet{
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+        @include desktop{
+            width: 50%;
+        }
+    }
+        &__break{
+            white-space: nowrap;
+        }
+
     }
     &--iframe{
         border-radius: .5rem;
         margin-left: auto;
         margin-right: auto;
         width: 90%;
+        @include tablet{
+            width: 65%;
+            height: 14rem;
+            margin-left: 1%;
+        }
+        @include desktop{
+            width: 33%;
+            position: relative;
+            bottom: 39%;
+            left: 53%;
+            justify-self: flex-end;
+
+        }
     }
 }
 .main-show{
     padding: 0;
+    @include desktop{
+        display: flex;
+        justify-content: space-between;
+    }
     &__header{
         padding: $mobile-long-padding;
+        @include tablet{
+            @include desktop-section-header;
+        }
+        @include desktop{
+            width: 10%;
+            padding-left: 7%;
+        }
     }
 }
 .info{
-    padding: 0 $mobile-long-padding;
+    // padding: 0 $mobile-long-padding;
+    @include tablet{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    &__wrap{
+        @include tablet{
+            display: none;
+        }
+    }
+    @include desktop{
+        width: 70%;
+        padding-right: 7%;
+    }
    &__container{
+    padding: 0 $mobile-long-padding;
        width: 100%;
        border-bottom: 0.125rem solid $color-mercury;
        &:hover{
            background-color: $color-alabaster;
        }
+       &:active{
+           background-color: $color-mercury;
+       }
        &--selected{
-           background-color: $color-alabaster;
+           background-color: $color-mercury;
        }
    }
    &__tag{
        color: $color-silver;
        padding-top: 1rem;
+       @include tablet{
+           display: inline-block;
+       }
    }
    &__content{
        &--bold{
            font-weight: 600;
+           @include tablet{
+               padding-left: 2%;
+           }
        }
    }
    &__ticket{
-       width: 100%;
+       width: 93%;
        height: 4rem;
        margin: 2rem 0;
        background-color: $color-black;
        color: $color-white;
        border-radius: .5rem;
        border: 0;
+       @include tablet{
+        width: 70%;
+       }
+   }
+   &__table{
+       display: none;
+        &--head{
+            color: $color-silver;
+            text-align: start;
+            &:first-child{
+                padding-left: 2%;
+            }
+        }
+        &--row:not(:first-child){
+            border-bottom: 2px solid $color-mercury;
+            height: 6rem;
+        }
+        &--content{
+            padding-top: 3%;
+        }
+
+       @include tablet{
+           display: table;
+       }
    }
 }

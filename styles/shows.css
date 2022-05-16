@@ -137,7 +137,7 @@ a {
 
 @media screen and (min-width: 768px) {
   footer {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2.1rem;
     font-weight: 400;
   }
@@ -169,7 +169,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .hero__shows--background > * {
-    padding-left: 4.5rem;
+    padding-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -182,12 +182,12 @@ a {
 }
 @media screen and (min-width: 768px) {
   .hero__shows--title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
   .hero__shows--title:nth-child(2) {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 7rem;
   }
 }
@@ -308,7 +308,8 @@ a {
 }
 @media screen and (min-width: 768px) {
   .info__ticket {
-    width: 70%;
+    width: 80%;
+    font-size: 1rem;
   }
 }
 .info__table {
@@ -322,7 +323,7 @@ a {
   padding-left: 2%;
 }
 .info__table--row:not(:first-child) {
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 0.125rem solid #e1e1e1;
   height: 6rem;
 }
 .info__table--content {

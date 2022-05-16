@@ -137,7 +137,7 @@ a {
 
 @media screen and (min-width: 768px) {
   footer {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2.1rem;
     font-weight: 400;
   }
@@ -150,12 +150,14 @@ a {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  padding: 1rem 0 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
   .nav {
     flex-direction: row;
     height: 7rem;
     justify-content: flex-start;
+    padding-left: 4.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -164,18 +166,10 @@ a {
   }
 }
 .nav__logo {
-  padding: 1rem 0 0.5rem 0;
   width: 10rem;
-}
-@media screen and (min-width: 768px) {
-  .nav__logo {
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-  }
 }
 .nav__items {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   width: 100%;
 }
@@ -210,6 +204,9 @@ a {
     margin-right: 3rem;
     height: 42%;
   }
+}
+.nav__link:first-child {
+  margin-left: 4.5rem;
 }
 
 .hero {
@@ -361,7 +358,6 @@ a {
 @media screen and (min-width: 768px) {
   .intro__content--card {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -403,7 +399,6 @@ a {
 @media screen and (min-width: 768px) {
   .gallery__list {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
@@ -416,7 +411,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2.1rem;
     font-weight: 400;
     height: 33rem;
@@ -461,7 +456,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .social {
-    padding-left: 4.5rem;
+    padding-left: 2.25rem;
     padding-right: 4.5rem;
     padding-top: 5rem;
   }
@@ -474,7 +469,6 @@ a {
 @media screen and (min-width: 768px) {
   .social__media {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
   }
 }
@@ -483,7 +477,6 @@ a {
 }
 .social__media--list {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
@@ -518,7 +511,6 @@ a {
 @media screen and (min-width: 768px) {
   .social__contact {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     padding: 3rem 0;
   }

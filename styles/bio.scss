@@ -12,25 +12,21 @@
     justify-content: center;
     align-items: center;
     color: $color-white;
+    padding: 1rem 0 0.5rem 0;
     @include tablet{
         flex-direction: row;
         height: 7rem;
-        justify-content: flex-start
+        justify-content: flex-start;
+        padding-left: 2*$desktop-short-padding;
     }
     @include desktop{
         padding-left: 3*$desktop-long-padding;
     }
     &__logo{
-        padding: 1rem 0 0.5rem 0;
         width: 10rem;
-        @include tablet{
-            padding-left: 2*$desktop-short-padding;
-            padding-right: 2*$desktop-short-padding;
-        }
     }
     &__items{
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         width: 100%;
         @include tablet{
@@ -61,6 +57,9 @@
             width: 100%;
             margin-right: $desktop-long-padding;
             height: 42%;
+        }
+        &:first-child{
+            margin-left: 2*$desktop-short-padding;
         }
     }
 }
@@ -186,7 +185,6 @@
         &--card{
             @include tablet{
                 display: flex;
-                flex-direction: row;
                 justify-content: space-between;
             }
         }
@@ -220,7 +218,6 @@
     &__list{
         @include tablet{
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
             align-content: space-between;
             flex-wrap: wrap;
@@ -265,7 +262,7 @@
     padding: $mobile-long-padding $mobile-short-padding $mobile-short-padding $mobile-short-padding;
     height: 100%;
     @include tablet{
-        padding-left: 2*$desktop-short-padding;
+        padding-left: $desktop-short-padding;
         padding-right: 2*$desktop-short-padding;
         padding-top: 5rem;
     }
@@ -276,7 +273,6 @@
     &__media{
         @include tablet{
             display: flex;
-            flex-direction: row;
             justify-content: flex-start;
         }
         & > *{
@@ -285,7 +281,6 @@
         }
         &--list{
             display: flex;
-            flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             @include tablet{
@@ -319,7 +314,6 @@
         }
         @include tablet{
             display: flex;
-            flex-direction: row;
             justify-content: flex-start;
             padding: $desktop-long-padding 0;
         }

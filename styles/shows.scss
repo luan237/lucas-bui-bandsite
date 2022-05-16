@@ -4,6 +4,7 @@
 @use "../styles/partials/partials" as *;
 @use "../styles/partials/variables" as *;
 
+//                          hero                    //
 .hero__shows{
     color: $color-white;
     background-image: url(../assets/images/hero-shows.jpg);
@@ -50,6 +51,7 @@
         }
 
     }
+    //                      soundcloud                              //
     &--iframe{
         border-radius: .5rem;
         margin-left: auto;
@@ -64,12 +66,16 @@
             width: 33%;
             position: relative;
             bottom: 39%;
-            left: 53%;
+            left: 47%;
             justify-self: flex-end;
 
         }
     }
 }
+
+
+
+//                        main section            //
 .main-show{
     padding: 0;
     @include desktop{
@@ -87,8 +93,8 @@
         }
     }
 }
+//                      tickets information             //
 .info{
-    // padding: 0 $mobile-long-padding;
     @include tablet{
         position: relative;
         display: flex;
@@ -103,6 +109,8 @@
         width: 70%;
         padding-right: 7%;
     }
+
+    //                  mobile ticket container             //
    &__container{
     padding: 0 $mobile-long-padding;
        width: 100%;
@@ -144,6 +152,8 @@
         width: 70%;
        }
    }
+
+//                 table for tablet and desktop             //
    &__table{
        display: none;
         &--head{

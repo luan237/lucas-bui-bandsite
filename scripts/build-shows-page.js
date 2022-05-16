@@ -49,6 +49,7 @@ const infoTableRow = document.createElement("tr");
 infoTableRow.classList.add("info__table--row");
 infoTable.appendChild(infoTableRow);
 
+// table header loop
 for (let j = 0; j < tableHead.length; j++) {
   const infoTableHead = document.createElement("th");
   infoTableHead.classList.add("info__table--head");
@@ -118,17 +119,15 @@ for (let i = 0; i < showsList.length; i++) {
   const infoTicketTable = document.createElement("button");
   infoTicketTable.classList.add("info__ticket");
   infoTicketTable.classList.add("sub-header");
-  // const infoTableContent = document.createElement("td")
-  // infoTableContent.classList.add("info__table--content");
 
-  // // append child
+  // append child
   infoTable.appendChild(infoTableRow);
   infoTableRow.appendChild(infoTableDate);
   infoTableRow.appendChild(infoTableVenue);
   infoTableRow.appendChild(infoTableLocation);
   infoTableRow.appendChild(infoTicketTable);
-  // infoTableRow.appendChild(infoTableContent);
 
+  // table content
   infoTableDate.innerText = showsList[i].date;
   infoTableVenue.innerText = showsList[i].venue;
   infoTableLocation.innerText = showsList[i].location;

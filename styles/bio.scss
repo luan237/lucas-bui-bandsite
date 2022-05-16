@@ -3,6 +3,7 @@
 @use "../styles/partials/colors" as *;
 @use "../styles/partials/partials" as *;
 @use "../styles/partials/variables" as *;
+
 // navigation bar
 .nav{
     background-color: $color-black;
@@ -20,7 +21,6 @@
         padding-left: 3*$desktop-long-padding;
     }
     &__logo{
-        // @include logo;
         padding: 1rem 0 0.5rem 0;
         width: 10rem;
         @include tablet{

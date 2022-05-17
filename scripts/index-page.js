@@ -1,23 +1,7 @@
-comments = [
-  {
-    name: "Connor Walton",
-    time: "02 / 17 / 2021",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    time: "01 / 09 / 2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    time: "12 / 20 / 2020",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+//////////////////////////////////////////////////////
+userURL = "https://project-1-api.herokuapp.com/";
+apiKey = "?api_key=ec0ca0db-c837-41b3-bbbb-75a43065e0c7";
+/////////////////////////////////////////////////////////
 
 // grab fan section
 const fans = document.querySelector(".fans");
@@ -71,50 +55,54 @@ fanSection.appendChild(fanSubmit);
 const savedContainer = document.createElement("div");
 savedContainer.classList.add("fans__saved");
 fans.appendChild(savedContainer);
-
 // Show default comment function
 function displayComments() {
-  for (let i = 0; i < comments.length; i++) {
-    // display comments container
-    const savedSection = document.createElement("div");
-    savedSection.classList.add("fans__saved--section");
-    savedContainer.appendChild(savedSection);
+  axios.get(userURL + "comments" + apiKey).then((response) => {
+    console.log(response);
+    for (let i = response.data.length - 1; i >= 0; i--) {
+      // display comments container
+      const savedSection = document.createElement("div");
+      savedSection.classList.add("fans__saved--section");
+      savedContainer.appendChild(savedSection);
 
-    // avatar
-    const savedAvatar = document.createElement("img");
-    savedAvatar.classList.add("fans__saved--avatar");
-    savedSection.appendChild(savedAvatar);
+      // avatar
+      const savedAvatar = document.createElement("img");
+      savedAvatar.classList.add("fans__saved--avatar");
+      savedSection.appendChild(savedAvatar);
 
-    // right side section of comments
-    const savedRightSide = document.createElement("div");
-    savedRightSide.classList.add("fans__saved--content");
-    savedSection.appendChild(savedRightSide);
+      // right side section of comments
+      const savedRightSide = document.createElement("div");
+      savedRightSide.classList.add("fans__saved--content");
+      savedSection.appendChild(savedRightSide);
 
-    // name and date container
-    const savedNAndD = document.createElement("div");
-    savedNAndD.classList.add("fans__saved--info");
-    savedRightSide.appendChild(savedNAndD);
+      // name and date container
+      const savedNAndD = document.createElement("div");
+      savedNAndD.classList.add("fans__saved--info");
+      savedRightSide.appendChild(savedNAndD);
 
-    // name
-    const savedName = document.createElement("p");
-    savedName.classList.add("fans__saved--name");
-    savedName.classList.add("sub-header");
-    savedNAndD.appendChild(savedName);
-    savedName.innerText = comments[i].name;
+      // name
+      const savedName = document.createElement("p");
+      savedName.classList.add("fans__saved--name");
+      savedName.classList.add("sub-header");
+      savedNAndD.appendChild(savedName);
+      console.log(response.data[i].name);
+      savedName.innerText = response.data[i].name;
 
-    // date
+      // date
 
-    const savedDate = document.createElement("p");
-    savedDate.classList.add("fans__saved--date");
-    savedNAndD.appendChild(savedDate);
-    savedDate.innerText = comments[i].time;
+      const savedDate = document.createElement("p");
+      savedDate.classList.add("fans__saved--date");
+      savedNAndD.appendChild(savedDate);
+      let time = new Date(response.data[i].timestamp);
+      savedDate.innerText = time.toLocaleDateString();
 
-    // comment
-    const savedComment = document.createElement("p");
-    savedComment.classList.add("fans__saved--comment");
-    savedRightSide.appendChild(savedComment);
-    savedComment.innerText = comments[i].comment;
-  }
+      // comment
+      const savedComment = document.createElement("p");
+      savedComment.classList.add("fans__saved--comment");
+      savedRightSide.appendChild(savedComment);
+      savedComment.innerText = response.data[i].comment;
+    }
+  });
   return displayComments;
 }
 const errorName = document.querySelector(".fans__container--name");
@@ -134,20 +122,16 @@ commentContainer.addEventListener("submit", (e) => {
     // display new comment function
     savedContainer.innerHTML = "";
     console.log(e);
-    let newDate = new Date();
-    let newDay = ("0" + newDate.getDate()).slice(-2);
-    let newMonth = ("0" + (newDate.getMonth() + 1)).slice(-2);
-    let newYear = newDate.getFullYear();
-    let newComment = {
-      name: e.target.name.value,
-      comment: e.target.comment.value,
-      time: newMonth + " / " + newDay + " / " + newYear,
-    };
-    comments.unshift(newComment);
-    //reset name and comment input, then display comment
-    e.target.reset();
-    displayComments();
-
+    axios
+      .post(userURL + "comments" + apiKey, {
+        name: e.target.name.value,
+        comment: e.target.comment.value,
+      })
+      .then((response) => {
+        // console.log(response);
+        e.target.reset();
+        displayComments();
+      });
     // remove error if available
     errorName.classList.remove("fans__container--error");
     errorComment.classList.remove("fans__container--error");

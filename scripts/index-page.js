@@ -58,7 +58,6 @@ fans.appendChild(savedContainer);
 // Show default comment function
 function displayComments() {
   axios.get(userURL + "comments" + apiKey).then((response) => {
-    console.log(response);
     for (let i = response.data.length - 1; i >= 0; i--) {
       // display comments container
       const savedSection = document.createElement("div");
@@ -85,7 +84,6 @@ function displayComments() {
       savedName.classList.add("fans__saved--name");
       savedName.classList.add("sub-header");
       savedNAndD.appendChild(savedName);
-      console.log(response.data[i].name);
       savedName.innerText = response.data[i].name;
 
       // date
@@ -94,7 +92,10 @@ function displayComments() {
       savedDate.classList.add("fans__saved--date");
       savedNAndD.appendChild(savedDate);
       let time = new Date(response.data[i].timestamp);
-      savedDate.innerText = time.toLocaleDateString();
+      let year = time.getFullYear();
+      let month = ("0" + (time.getUTCMonth() + 1)).slice(-2);
+      let day = ("0" + time.getDate()).slice(-2);
+      savedDate.innerText = `${year} / ${month} / ${day}`;
 
       // comment
       const savedComment = document.createElement("p");
@@ -128,10 +129,10 @@ commentContainer.addEventListener("submit", (e) => {
         comment: e.target.comment.value,
       })
       .then((response) => {
-        // console.log(response);
         e.target.reset();
         displayComments();
       });
+
     // remove error if available
     errorName.classList.remove("fans__container--error");
     errorComment.classList.remove("fans__container--error");

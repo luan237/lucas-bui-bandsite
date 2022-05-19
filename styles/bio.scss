@@ -494,5 +494,25 @@
             color: $color-silver;
             min-width: 7.175rem;
         }
-    }
+        &--liked{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            padding-left: 1.5rem;
+            &-button{
+            width: 2.5rem;
+            height: 2.5rem;
+            &:active{
+                width: 2rem;
+                height: 2rem;
+                margin-left: 0.1rem;
+                margin-top: 0.1rem;
+            }
+        }
+        &-count{
+            color: red;
+            text-align: center;
+        }
+    
+    }}
 }

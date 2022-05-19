@@ -751,4 +751,24 @@ a {
 .fans__saved--date {
   color: #afafaf;
   min-width: 7.175rem;
+}
+.fans__saved--liked {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+}
+.fans__saved--liked-button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.fans__saved--liked-button:active {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.1rem;
+  margin-top: 0.1rem;
+}
+.fans__saved--liked-count {
+  color: red;
+  text-align: center;
 }/*# sourceMappingURL=bio.css.map */

@@ -55,10 +55,14 @@ fanSection.appendChild(fanSubmit);
 const savedContainer = document.createElement("div");
 savedContainer.classList.add("fans__saved");
 fans.appendChild(savedContainer);
+
 // Show default comment function
 function displayComments() {
   axios.get(userURL + "comments" + apiKey).then((response) => {
-    for (let i = response.data.length - 1; i >= 0; i--) {
+    response.data.sort((b, a) => {
+      return a.timestamp - b.timestamp;
+    });
+    for (let i = 0; i < response.data.length; i++) {
       // display comments container
       const savedSection = document.createElement("div");
       savedSection.classList.add("fans__saved--section");
@@ -102,8 +106,38 @@ function displayComments() {
       savedComment.classList.add("fans__saved--comment");
       savedRightSide.appendChild(savedComment);
       savedComment.innerText = response.data[i].comment;
+
+      // like button
+
+      const likedCommentContainer = document.createElement("div");
+      likedCommentContainer.classList.add("fans__saved--liked");
+      savedSection.appendChild(likedCommentContainer);
+
+      // like count
+      const likeCount = document.createElement("p");
+      likeCount.classList.add("fans__saved--liked-count");
+      likedCommentContainer.appendChild(likeCount);
+      likeCount.innerHTML = response.data[i].likes;
+      const likedComment = document.createElement("img");
+      likedComment.classList.add("fans__saved--liked-button");
+      likedComment.src = "./assets/icons/SVG/like-icon.png";
+      likedComment.alt = "like icon";
+      likedCommentContainer.appendChild(likedComment);
+      likedComment.addEventListener("click", (e) => {
+        e.preventDefault();
+        axios
+          .put(
+            userURL + "comments/" + response.data[i].id + "/like" + apiKey,
+            {}
+          )
+          .then((response) => {
+            console.log(response.data.likes);
+            likeCount.innerHTML = response.data.likes;
+          });
+      });
     }
   });
+
   return displayComments;
 }
 const errorName = document.querySelector(".fans__container--name");
@@ -122,7 +156,6 @@ commentContainer.addEventListener("submit", (e) => {
   } else {
     // display new comment function
     savedContainer.innerHTML = "";
-    console.log(e);
     axios
       .post(userURL + "comments" + apiKey, {
         name: e.target.name.value,

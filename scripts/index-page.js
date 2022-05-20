@@ -3,57 +3,64 @@ userURL = "https://project-1-api.herokuapp.com/";
 apiKey = "?api_key=ec0ca0db-c837-41b3-bbbb-75a43065e0c7";
 /////////////////////////////////////////////////////////
 
+// create Element with Class function
+function createElwithCl(el, cl) {
+  const newEl = document.createElement(el);
+  newEl.classList.add(cl);
+  return newEl;
+}
+
 // grab fan section
 const fans = document.querySelector(".fans");
-// loop for every comments
-const commentContainer = document.createElement("form");
-commentContainer.classList.add("fans__container");
+
+// container for comments
+const commentContainer = createElwithCl("form", "fans__container");
 fans.appendChild(commentContainer);
 
 // input avatar
-const fanAvatar = document.createElement("div");
-fanAvatar.classList.add("fans__container--avatar");
-// fanAvatar.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
+const fanAvatar = createElwithCl("div", "fans__container--avatar");
 commentContainer.appendChild(fanAvatar);
 
 // input comment section
-const fanSection = document.createElement("div");
-fanSection.classList.add("fans__container--section");
+const fanSection = createElwithCl("div", "fans__container--section");
 commentContainer.appendChild(fanSection);
-// input name
-const fanNameLabel = document.createElement("label");
-fanNameLabel.classList.add("fans__container--label");
+// input name(label)
+const fanNameLabel = createElwithCl("label", "fans__container--label");
+fanNameLabel.setAttribute("for", "name");
 fanSection.appendChild(fanNameLabel);
 fanNameLabel.innerText = "NAME";
-const fanName = document.createElement("input");
-fanName.classList.add("fans__container--name");
-fanName.setAttribute("type", "text");
-fanName.setAttribute("name", "name");
-fanName.setAttribute("placeholder", "  Enter your name");
+
+// name
+const fanName = createElwithCl("input", "fans__container--name");
+fanName.type = "text";
+fanName.name = "name";
+fanName.placeholder = "Enter your name";
+fanName.id = "name";
+// fanNameLabel.for = "name";
 fanSection.appendChild(fanName);
-// input comment
-const fanCommentLabel = document.createElement("label");
-fanCommentLabel.classList.add("fans__container--label");
-const fanComment = document.createElement("textarea");
+
+// input comment (label)
+const fanCommentLabel = createElwithCl("label", "fans__container--label");
+const fanComment = createElwithCl("textarea", "fans__container--comment");
 fanSection.appendChild(fanCommentLabel);
 fanCommentLabel.innerText = "COMMENT";
-fanComment.classList.add("fans__container--comment");
-fanComment.setAttribute("type", "text");
-fanComment.setAttribute("name", "comment");
-fanComment.setAttribute("placeholder", " Add a new comment");
-fanSection.appendChild(fanComment);
-// submit button
-const fanSubmit = document.createElement("button");
-fanSubmit.classList.add("fans__container--submit");
-fanSubmit.classList.add("sub-header");
+fanCommentLabel.setAttribute("for", "comment");
 
+// comment
+fanComment.type = "text";
+fanComment.id = "comment";
+fanComment.name = "comment";
+fanComment.placeholder = "Add a new comment";
+fanSection.appendChild(fanComment);
+
+// submit button
+const fanSubmit = createElwithCl("button", "fans__container--submit");
+fanSubmit.classList.add("sub-header");
 fanSubmit.innerText = "COMMENT";
 fanSection.appendChild(fanSubmit);
 
 // comment section
-
-const savedContainer = document.createElement("div");
-savedContainer.classList.add("fans__saved");
+const savedContainer = createElwithCl("div", "fans__saved");
 fans.appendChild(savedContainer);
 
 // Show default comment function
@@ -64,36 +71,29 @@ function displayComments() {
     });
     for (let i = 0; i < response.data.length; i++) {
       // display comments container
-      const savedSection = document.createElement("div");
-      savedSection.classList.add("fans__saved--section");
+      const savedSection = createElwithCl("div", "fans__saved--section");
       savedContainer.appendChild(savedSection);
 
       // avatar
-      const savedAvatar = document.createElement("img");
-      savedAvatar.classList.add("fans__saved--avatar");
+      const savedAvatar = createElwithCl("img", "fans__saved--avatar");
       savedSection.appendChild(savedAvatar);
 
       // right side section of comments
-      const savedRightSide = document.createElement("div");
-      savedRightSide.classList.add("fans__saved--content");
+      const savedRightSide = createElwithCl("div", "fans__saved--content");
       savedSection.appendChild(savedRightSide);
 
       // name and date container
-      const savedNAndD = document.createElement("div");
-      savedNAndD.classList.add("fans__saved--info");
+      const savedNAndD = createElwithCl("div", "fans__saved--info");
       savedRightSide.appendChild(savedNAndD);
 
       // name
-      const savedName = document.createElement("p");
-      savedName.classList.add("fans__saved--name");
+      const savedName = createElwithCl("p", "fans__saved--name");
       savedName.classList.add("sub-header");
       savedNAndD.appendChild(savedName);
       savedName.innerText = response.data[i].name;
 
       // date
-
-      const savedDate = document.createElement("p");
-      savedDate.classList.add("fans__saved--date");
+      const savedDate = createElwithCl("p", "fans__saved--date");
       savedNAndD.appendChild(savedDate);
       let time = new Date(response.data[i].timestamp);
       let year = time.getFullYear();
@@ -102,24 +102,20 @@ function displayComments() {
       savedDate.innerText = `${year} / ${month} / ${day}`;
 
       // comment
-      const savedComment = document.createElement("p");
-      savedComment.classList.add("fans__saved--comment");
+      const savedComment = createElwithCl("p", "fans__saved--comment");
       savedRightSide.appendChild(savedComment);
       savedComment.innerText = response.data[i].comment;
 
       // like button
 
-      const likedCommentContainer = document.createElement("div");
-      likedCommentContainer.classList.add("fans__saved--liked");
+      const likedCommentContainer = createElwithCl("div", "fans__saved--liked");
       savedSection.appendChild(likedCommentContainer);
 
       // like count
-      const likeCount = document.createElement("p");
-      likeCount.classList.add("fans__saved--liked-count");
+      const likeCount = createElwithCl("p", "fans__saved--liked-count");
       likedCommentContainer.appendChild(likeCount);
-      likeCount.innerHTML = response.data[i].likes;
-      const likedComment = document.createElement("img");
-      likedComment.classList.add("fans__saved--liked-button");
+      likeCount.innerText = response.data[i].likes;
+      const likedComment = createElwithCl("img", "fans__saved--liked-button");
       likedComment.src = "./assets/icons/SVG/like-icon.png";
       likedComment.alt = "like icon";
       likedCommentContainer.appendChild(likedComment);
@@ -131,8 +127,7 @@ function displayComments() {
             {}
           )
           .then((response) => {
-            console.log(response.data.likes);
-            likeCount.innerHTML = response.data.likes;
+            likeCount.innerText = response.data.likes;
           });
       });
     }
@@ -140,8 +135,10 @@ function displayComments() {
 
   return displayComments;
 }
+// add class when comment error
 const errorName = document.querySelector(".fans__container--name");
 const errorComment = document.querySelector(".fans__container--comment");
+
 // Show default comment
 displayComments();
 
@@ -155,13 +152,13 @@ commentContainer.addEventListener("submit", (e) => {
     errorComment.classList.add("fans__container--error");
   } else {
     // display new comment function
-    savedContainer.innerHTML = "";
+    savedContainer.reset();
     axios
       .post(userURL + "comments" + apiKey, {
         name: e.target.name.value,
         comment: e.target.comment.value,
       })
-      .then((response) => {
+      .then(() => {
         e.target.reset();
         displayComments();
       });

@@ -101,7 +101,6 @@ axios.get(userURL + "showdates" + apiKey).then((response) => {
 
     // table content
     infoTableDate.innerText = date.toLocaleDateString();
-    console.log(date.toLocaleDateString());
     infoTableVenue.innerText = response.data[i].place;
     infoTableLocation.innerText = response.data[i].location;
     infoTicketTable.innerText = "BUY TICKETS";

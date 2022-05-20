@@ -1,0 +1,197 @@
+@use "../styles/partials/css-reset" as *;
+@use "../styles/partials/font" as *;
+@use "../styles/partials/colors" as *;
+@use "../styles/partials/partials" as *;
+@use "../styles/partials/variables" as *;
+
+
+// header margin
+.header{
+    margin-bottom: $mobile-long-padding;
+    @include tablet{
+        margin-bottom: $desktop-long-padding;
+    }
+    @include desktop{
+        margin-bottom: 5rem;
+    }
+}
+
+// nav bar
+.nav{
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    padding: 1rem 0 0.5rem 0;
+    @include tablet{
+        flex-direction: row;
+        height: 7rem;
+        justify-content: flex-start;
+        padding-left: 2*$desktop-short-padding;
+    }
+    @include desktop{
+        padding-left: 3*$desktop-long-padding;
+    }
+    &__logo{
+        width: 10rem;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        @include tablet{
+            width: auto;
+            height: 100%;
+            align-items: flex-end;
+            
+        }
+    }
+    &__link{
+        color: $color-mercury;
+        padding-bottom: 1.35rem;
+        width: 50%;
+        text-align: center;
+        &:active{
+            color: $color-white;
+            font-weight: $bold;
+        }
+        &:hover{
+            color: $color-white;
+            font-weight: $demi;
+        }
+        &--highlight{
+            border-bottom: 0.125rem solid $color-white;
+            font-weight: $demi;
+        }
+        @include tablet{
+            width: 100%;
+            margin-right: $desktop-long-padding;
+            height: 42%;
+        }
+        &:first-child{
+            margin-left: 2*$desktop-short-padding;
+        }
+    }
+}
+
+
+// footer
+.footer{
+    position: relative;
+    width: 100%;
+    @include tablet{
+        @include desktop-footer-copy;
+        height: 33rem;
+    }
+    @include desktop{
+        height: 25rem;
+    }
+    &__logo{
+        &--mobile{
+    padding-bottom: $mobile-short-padding;
+    padding-top: 3*$mobile-short-padding ;
+    @include tablet{
+        display: none;
+    }
+}
+    &--tablet{
+        display: none;
+        @include tablet{
+            display: block;
+            position: absolute;
+            width: 10rem;
+            right: $desktop-short-padding;
+            }
+        @include desktop{
+            right: 3*$desktop-long-padding
+        }
+    }
+}
+}
+.social{
+    background-color: $color-black;
+    color: $color-white;
+    padding: $mobile-long-padding $mobile-short-padding $mobile-short-padding $mobile-short-padding;
+    height: 100%;
+    @include tablet{
+        padding-left: $desktop-short-padding;
+        padding-right: 2*$desktop-short-padding;
+        padding-top: 5rem;
+    }
+    @include desktop{
+        padding: $desktop-long-padding 3*$desktop-long-padding;
+    }
+
+    &__media{
+        @include tablet{
+            display: flex;
+            justify-content: flex-start;
+        }
+        & > *{
+            padding-bottom: $mobile-short-padding;
+
+        }
+        &--list{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @include tablet{
+                padding-left: 2rem;
+            }
+        }
+        &--link{
+            margin-right: 2rem;
+        }
+        &--title{
+            @include tablet{
+                font-weight: 600;
+            }
+        }
+        &--pic{
+            @include tablet{
+                width: 2.5rem;
+                max-height: 2rem;
+            }
+        }
+    }
+    &__contact{
+        & > *{
+            padding-bottom: $mobile-short-padding;
+            & > *{
+                padding-bottom: $mobile-short-padding;
+            }
+        }
+        &--email{
+            color: $color-white;
+        }
+        @include tablet{
+            display: flex;
+            justify-content: flex-start;
+            padding: $desktop-long-padding 0;
+        }
+        &--person{
+            @include tablet{
+            padding: 0 0.2rem;
+            padding-right: 4%;
+        }
+            @include desktop{
+                padding-right: 3.55rem;
+            }
+    }
+        &--name{
+            font-weight: 600;
+        @include desktop{
+            font-size: 1.125rem;
+        }
+        }
+    &__copyright{
+        padding-top: 20%;
+        @include tablet{
+            padding-top: 3rem;
+            height: 5rem;
+        }
+    }
+}
+}

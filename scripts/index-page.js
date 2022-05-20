@@ -138,6 +138,23 @@ function displayComments() {
               console.log(error);
             });
         });
+
+        // delete comment
+        const deleteComment = createElwithCl("p", "fans__saved--delete");
+        likedCommentContainer.appendChild(deleteComment);
+        deleteComment.innerText = "X";
+        deleteComment.addEventListener("click", (e) => {
+          e.preventDefault();
+          axios
+            .delete(userURL + "comments/" + response.data[i].id + apiKey)
+            .then(() => {
+              savedContainer.innerHTML = "";
+              displayComments();
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        });
       }
     })
     .catch((error) => {
@@ -163,7 +180,7 @@ commentContainer.addEventListener("submit", (e) => {
     errorComment.classList.add("fans__container--error");
   } else {
     // display new comment function
-    savedContainer.reset();
+    savedContainer.innerHTML = "";
     axios
       .post(userURL + "comments" + apiKey, {
         name: e.target.name.value,

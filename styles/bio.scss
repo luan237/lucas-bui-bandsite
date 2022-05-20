@@ -259,8 +259,10 @@
         max-height: 50rem;
         overflow-y: scroll;
         margin: 0 auto;
+        width: 95%;
         @include tablet{
             padding: 0 5%;
+            
         }
         @include desktop{
             width: 60%;
@@ -284,6 +286,7 @@
                 
         }
         &--avatar{
+            float:left;
             background-color: $color-mercury;
             border: 0.0625rem solid $color-mercury;
             @include avatar;
@@ -331,6 +334,14 @@
             color: red;
             text-align: center;
         }
-    
-    }}
+
+    }
+        &--delete{
+            color: $color-silver;
+            text-align: center;
+            &:active{
+                padding-left: .5rem;
+                padding-top: .5rem;
+            }
+        }}
 }

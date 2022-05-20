@@ -539,6 +539,7 @@ a {
 .fans__saved--liked-button {
   width: 2.5rem;
   height: 2.5rem;
+  transition: width 1s;
 }
 .fans__saved--liked-button:active {
   width: 2rem;

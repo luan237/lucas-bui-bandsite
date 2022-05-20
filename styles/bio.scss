@@ -323,6 +323,7 @@
             &-button{
             width: 2.5rem;
             height: 2.5rem;
+            transition: width 1s;
             &:active{
                 width: 2rem;
                 height: 2rem;

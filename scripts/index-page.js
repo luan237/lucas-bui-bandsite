@@ -65,73 +65,84 @@ fans.appendChild(savedContainer);
 
 // Show default comment function
 function displayComments() {
-  axios.get(userURL + "comments" + apiKey).then((response) => {
-    response.data.sort((b, a) => {
-      return a.timestamp - b.timestamp;
-    });
-    for (let i = 0; i < response.data.length; i++) {
-      // display comments container
-      const savedSection = createElwithCl("div", "fans__saved--section");
-      savedContainer.appendChild(savedSection);
-
-      // avatar
-      const savedAvatar = createElwithCl("img", "fans__saved--avatar");
-      savedSection.appendChild(savedAvatar);
-
-      // right side section of comments
-      const savedRightSide = createElwithCl("div", "fans__saved--content");
-      savedSection.appendChild(savedRightSide);
-
-      // name and date container
-      const savedNAndD = createElwithCl("div", "fans__saved--info");
-      savedRightSide.appendChild(savedNAndD);
-
-      // name
-      const savedName = createElwithCl("p", "fans__saved--name");
-      savedName.classList.add("sub-header");
-      savedNAndD.appendChild(savedName);
-      savedName.innerText = response.data[i].name;
-
-      // date
-      const savedDate = createElwithCl("p", "fans__saved--date");
-      savedNAndD.appendChild(savedDate);
-      let time = new Date(response.data[i].timestamp);
-      let year = time.getFullYear();
-      let month = ("0" + (time.getUTCMonth() + 1)).slice(-2);
-      let day = ("0" + time.getDate()).slice(-2);
-      savedDate.innerText = `${year} / ${month} / ${day}`;
-
-      // comment
-      const savedComment = createElwithCl("p", "fans__saved--comment");
-      savedRightSide.appendChild(savedComment);
-      savedComment.innerText = response.data[i].comment;
-
-      // like button
-
-      const likedCommentContainer = createElwithCl("div", "fans__saved--liked");
-      savedSection.appendChild(likedCommentContainer);
-
-      // like count
-      const likeCount = createElwithCl("p", "fans__saved--liked-count");
-      likedCommentContainer.appendChild(likeCount);
-      likeCount.innerText = response.data[i].likes;
-      const likedComment = createElwithCl("img", "fans__saved--liked-button");
-      likedComment.src = "./assets/icons/SVG/like-icon.png";
-      likedComment.alt = "like icon";
-      likedCommentContainer.appendChild(likedComment);
-      likedComment.addEventListener("click", (e) => {
-        e.preventDefault();
-        axios
-          .put(
-            userURL + "comments/" + response.data[i].id + "/like" + apiKey,
-            {}
-          )
-          .then((response) => {
-            likeCount.innerText = response.data.likes;
-          });
+  axios
+    .get(userURL + "comments" + apiKey)
+    .then((response) => {
+      response.data.sort((b, a) => {
+        return a.timestamp - b.timestamp;
       });
-    }
-  });
+      for (let i = 0; i < response.data.length; i++) {
+        // display comments container
+        const savedSection = createElwithCl("div", "fans__saved--section");
+        savedContainer.appendChild(savedSection);
+
+        // avatar
+        const savedAvatar = createElwithCl("img", "fans__saved--avatar");
+        savedSection.appendChild(savedAvatar);
+
+        // right side section of comments
+        const savedRightSide = createElwithCl("div", "fans__saved--content");
+        savedSection.appendChild(savedRightSide);
+
+        // name and date container
+        const savedNAndD = createElwithCl("div", "fans__saved--info");
+        savedRightSide.appendChild(savedNAndD);
+
+        // name
+        const savedName = createElwithCl("p", "fans__saved--name");
+        savedName.classList.add("sub-header");
+        savedNAndD.appendChild(savedName);
+        savedName.innerText = response.data[i].name;
+
+        // date
+        const savedDate = createElwithCl("p", "fans__saved--date");
+        savedNAndD.appendChild(savedDate);
+        let time = new Date(response.data[i].timestamp);
+        let year = time.getFullYear();
+        let month = ("0" + (time.getUTCMonth() + 1)).slice(-2);
+        let day = ("0" + time.getDate()).slice(-2);
+        savedDate.innerText = `${year} / ${month} / ${day}`;
+
+        // comment
+        const savedComment = createElwithCl("p", "fans__saved--comment");
+        savedRightSide.appendChild(savedComment);
+        savedComment.innerText = response.data[i].comment;
+
+        // like button
+
+        const likedCommentContainer = createElwithCl(
+          "div",
+          "fans__saved--liked"
+        );
+        savedSection.appendChild(likedCommentContainer);
+
+        // like count
+        const likeCount = createElwithCl("p", "fans__saved--liked-count");
+        likedCommentContainer.appendChild(likeCount);
+        likeCount.innerText = response.data[i].likes;
+        const likedComment = createElwithCl("img", "fans__saved--liked-button");
+        likedComment.src = "./assets/icons/SVG/like-icon.png";
+        likedComment.alt = "like icon";
+        likedCommentContainer.appendChild(likedComment);
+        likedComment.addEventListener("click", (e) => {
+          e.preventDefault();
+          axios
+            .put(
+              userURL + "comments/" + response.data[i].id + "/like" + apiKey,
+              {}
+            )
+            .then((response) => {
+              likeCount.innerText = response.data.likes;
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        });
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
   return displayComments;
 }
@@ -161,6 +172,9 @@ commentContainer.addEventListener("submit", (e) => {
       .then(() => {
         e.target.reset();
         displayComments();
+      })
+      .catch((error) => {
+        console.log(error);
       });
 
     // remove error if available
